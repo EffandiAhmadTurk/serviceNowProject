@@ -1,0 +1,26 @@
+@import 'styles/main.scss';
+
+.container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  #reset-password-form {
+    max-width: 500px;
+    background-color: white;
+    @include p-xxl;
+    border-radius: 20px;
+    h1 {
+      @include heading-xxxl;
+      @include mb-m;
+    }
+  }
+
+  .success-wrapper {
+    background-color: white;
+    @include p-l;
+    @include text-m;
+    border-radius: 20px;
+  }
+}

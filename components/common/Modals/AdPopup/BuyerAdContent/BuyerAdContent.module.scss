@@ -1,0 +1,27 @@
+@import 'styles/main.scss';
+
+.container {
+  box-sizing: border-box;
+  background-color: $blue_100;
+  text-align: center;
+  @include p-xl;
+
+  br {
+    display: none;
+    @include tablet {
+      display: block;
+    }
+  }
+
+  h3 {
+    @include heading-xxxl;
+    color: white;
+    @include mb-xs;
+  }
+
+  p {
+    @include text-m;
+    color: white;
+    @include mb-m;
+  }
+}

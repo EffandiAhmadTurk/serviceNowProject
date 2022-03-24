@@ -1,0 +1,51 @@
+@import 'styles/main.scss';
+
+.container {
+  @include mt-xl;
+  @include mb-xl;
+  @include container;
+  @include mobile {
+    @include mt-l;
+    @include mb-l;
+  }
+  & .wrapper {
+    @include wrapper;
+    max-width: 80%;
+    @include mobile {
+      max-width: none;
+    }
+    margin: auto;
+    text-align: center;
+    & > h3 {
+      @include heading-xxxxxl;
+      @include mb-l;
+      line-height: 110%;
+
+      & > span {
+        font-size: 94px;
+        line-height: 110%;
+        text-align: center;
+        letter-spacing: -0.02em;
+        color: $blue-100;
+        &.plus {
+          font-size: 62px;
+        }
+        @include tablet {
+          font-size: 64px;
+          &.plus {
+            font-size: 46px;
+          }
+        }
+      }
+    }
+    & > p {
+      @include paragraph;
+      max-width: 80%;
+      @include mobile {
+        max-width: none;
+      }
+      margin: auto;
+      color: $black-80;
+    }
+  }
+}

@@ -1,0 +1,91 @@
+@import 'styles/main.scss';
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+
+  p {
+    @include paragraph;
+  }
+
+  .text {
+    max-height: 200px;
+    overflow: hidden;
+    @include mobile {
+      -webkit-line-clamp: 6;
+    }
+    &.full-text {
+      max-height: inherit;
+    }
+  }
+  .more-link {
+    color: $blue-100;
+    cursor: pointer;
+    transition: 0.2s;
+    &:hover {
+      color: $blue-80;
+      text-decoration: underline;
+      transition: 0.2s;
+    }
+  }
+
+  .chips {
+    margin-bottom: 15px;
+    .row {
+      display: grid;
+      grid-auto-flow: column;
+      grid-gap: $space-s;
+      grid-template-columns: 200px 200px;
+      justify-content: center;
+      @include mb-xs;
+      @include tablet {
+        grid-auto-flow: inherit;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .chip {
+      display: flex;
+      align-items: center;
+      border-radius: 10px;
+      @include pt-s;
+      @include pb-s;
+      @include pl-m;
+      @include pr-m;
+
+      svg {
+        @include mr-s;
+      }
+
+      .value {
+        @include heading-xxxl;
+        color: inherit;
+        @include mobile {
+          font-size: 20px;
+        }
+      }
+
+      &.green {
+        color: $green-100;
+        background-color: $green-10;
+      }
+
+      &.blue {
+        color: $blue-100;
+        background-color: $blue-10;
+      }
+
+      &.secondary {
+        color: $blue-100;
+      }
+
+      .text {
+        @include text-s;
+      }
+    }
+  }
+}

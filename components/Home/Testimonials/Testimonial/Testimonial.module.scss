@@ -1,0 +1,169 @@
+@import 'styles/main.scss';
+
+.container {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.2s;
+  &:hover {
+    transition: 0.2s;
+    @include shadow;
+    cursor: pointer;
+  }
+
+  @include mr-m;
+  @include ml-m;
+
+  &.border {
+    border: 1px solid $blue-20;
+  }
+
+  @include tablet {
+    margin: auto;
+  }
+
+  @include mobile {
+    height: 100%;
+  }
+
+  & .image-wrapper {
+    height: 250px;
+    @include mobile {
+      height: 220px;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+
+      &.object-fit-contain {
+        object-fit: contain;
+      }
+    }
+  }
+  & .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    text-align: left;
+    @include pt-s;
+    @include pb-s;
+    @include pl-m;
+    @include pr-m;
+
+    & > div {
+      .rating-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: flex-start;
+
+        @include tablet {
+          grid-template-columns: 0.8fr 1.2fr;
+        }
+
+        .rating {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .reviews-img {
+          height: 30px;
+          @include mobile {
+            height: 24px;
+          }
+        }
+
+        .rating-stars {
+          span {
+            font-size: 20px;
+            @include tablet {
+              font-size: 16px;
+            }
+
+            @include mobile {
+              font-size: 14px;
+            }
+          }
+        }
+
+        .saved-wrapper {
+          display: flex;
+          justify-content: flex-end;
+          .saved {
+            @include pt-xxs;
+            @include pb-xxs;
+            @include pr-xs;
+            @include pl-xs;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            background-color: $green-20;
+            @include text-l;
+            color: $green-100;
+            font-weight: 300;
+            @include mobile {
+              @include text-m;
+              font-weight: 300;
+              color: $green-100;
+            }
+          }
+        }
+      }
+
+      .text {
+        @include text-m;
+        @include mb-xxs;
+        font-weight: 100;
+        line-height: 1.5;
+        color: $black-80;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        & h3 {
+          font-weight: 500;
+          @include mobile {
+            font-weight: 400;
+          }
+        }
+        @include mobile {
+          @include text-xs;
+          font-weight: 100;
+          line-height: 1.5;
+          color: $black-80;
+        }
+      }
+
+      .see-more {
+        @include text-s;
+        @include mb-s;
+        color: $blue-100;
+        font-weight: 200;
+        text-decoration: underline;
+        cursor: pointer;
+        &:hover {
+          color: $blue-80;
+        }
+      }
+    }
+    .about-author {
+      @include text-m;
+      font-weight: 300;
+      @include mobile {
+        @include text-s;
+        font-weight: 300;
+      }
+    }
+    .footer {
+      min-height: 25px;
+    }
+  }
+}

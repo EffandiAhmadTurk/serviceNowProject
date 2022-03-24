@@ -1,0 +1,52 @@
+@import 'styles/main.scss';
+
+.container {
+  @include container;
+  @include mt-m;
+  @include mb-l;
+  @include mobile {
+    @include mb-m;
+  }
+
+  & .wrapper {
+    @include wrapper;
+    @include pt-s;
+    @include mobile {
+      padding-top: 0;
+    }
+
+    .items-wrapper {
+      @include container;
+      display: flex;
+      justify-content: space-between;
+      @include mobile {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    .leadership-item {
+      display: flex;
+      flex-direction: column;
+      width: 27%;
+      text-align: center;
+      & > span {
+        @include text-m;
+        color: $black-60;
+      }
+      & > h3 {
+        @include mt-m;
+        @include mb-s;
+        @include heading-xxl;
+      }
+      @include mobile {
+        width: 50%;
+        @include mb-s;
+        & > h3 {
+          @include mt-s;
+          @include mb-xs;
+        }
+      }
+    }
+  }
+}

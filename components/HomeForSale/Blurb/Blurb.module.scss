@@ -1,0 +1,9 @@
+@import 'styles/main.scss';
+
+.container {
+  @include mb-l;
+  @include container;
+  @include text-m;
+  color: $black_40;
+  @include wrapper;
+}

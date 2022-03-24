@@ -1,0 +1,214 @@
+@import 'styles/main.scss';
+
+.content-card {
+  display: block;
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  // @include pt-xl;
+  // @include pb-xl;
+  // @include mobile {
+  //   // @include pt-m;
+  //   // @include pb-m;
+  // }
+
+  & .container {
+    @include container;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    grid-gap: $space-m;
+    position: relative;
+
+    @include wrapper;
+    &.text-right {
+      grid-template-columns: 1fr 1.2fr;
+      @include tablet {
+        grid-template-columns: 1fr 1fr;
+      }
+      @include mobile {
+        grid-template-columns: 1fr;
+      }
+    }
+    @include tablet {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include mobile {
+      grid-gap: $space-s;
+      grid-template-columns: 1fr;
+    }
+
+    &.no-image-adjustments {
+      grid-template-columns: 1fr !important;
+    }
+
+    & .image {
+      height: 400px;
+      border-radius: 20px;
+      width: 100%;
+      object-fit: cover;
+
+      @include tablet {
+        height: 310px;
+      }
+
+      @include mobile {
+        height: 275px;
+      }
+
+      &.hero-mobile-adjustments {
+        @include mobile {
+          display: none;
+        }
+      }
+
+      &.object-fit-contain {
+        object-fit: contain;
+      }
+    }
+
+    & .content-wrapper {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      &.no-image-adjustments {
+        justify-content: center;
+        text-align: center;
+      }
+
+      @include mobile {
+        margin: 0;
+        @include mt-m;
+        box-sizing: border-box;
+      }
+
+      &.text-left {
+        order: -1;
+        margin-left: 0;
+        @include mr-m;
+        @include mobile {
+          order: initial;
+        }
+      }
+
+      & .contents {
+        @include ml-xl;
+        @include mr-xl;
+
+        &.hero-adjustments {
+          margin-left: 0px;
+          margin-right: 0px;
+        }
+
+        &.padding-right {
+          @include pr-xxl;
+          @include tablet {
+            padding-right: 0px;
+          }
+        }
+
+        @include tablet {
+          @include ml-m;
+          @include mr-m;
+        }
+        @include mobile {
+          margin: 0;
+          text-align: center;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        & .eyebrow {
+          @include overline;
+          color: $sienna-100;
+        }
+        & .heading {
+          @include heading-xxxxl;
+          @include mb-s;
+          white-space: pre-line;
+        }
+        & .inner-content {
+          @include mb-m;
+          @include paragraph;
+          color: $black-80;
+        }
+        & .disclaimer {
+          @include text-s;
+          color: $black-80;
+
+          &.white {
+            color: white;
+          }
+        }
+        & .actions {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: $space-s;
+          max-width: 50%;
+          @include mb-xs;
+          box-sizing: border-box;
+          width: 100%;
+          @include tablet {
+            grid-template-columns: 1fr;
+            max-width: inherit;
+            @include pr-xl;
+          }
+
+          @include mobile {
+            @include pl-xl;
+          }
+        }
+      }
+
+      & .pattern-left {
+        top: 0px;
+        left: 0px;
+        transform: translate(0%, -60%);
+        @include tablet {
+          transform: translate(0%, -125%);
+        }
+        @include mobile {
+          transform: translate(0%, -50%);
+        }
+        &.hero-adjustments {
+          @include tablet {
+            transform: translate(0%, -75%);
+          }
+          @include mobile {
+            transform: translate(0%, -100%);
+          }
+        }
+      }
+
+      & .pattern-right {
+        right: 0px;
+        bottom: 0px;
+        transform: translate(0%, 40%);
+        &.hero-adjustments {
+          @include tablet {
+            transform: translate(0%, 75%);
+          }
+          @include mobile {
+            transform: translate(0%, 100%);
+          }
+        }
+      }
+
+      &.text-right {
+        & .pattern-right {
+          right: 0px;
+          top: 0px;
+          transform: translate(0%, -50%);
+          bottom: inherit;
+        }
+      }
+
+      & .pattern {
+        position: absolute;
+        z-index: -1;
+      }
+    }
+  }
+}

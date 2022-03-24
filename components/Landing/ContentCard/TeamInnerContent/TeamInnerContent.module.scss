@@ -1,0 +1,27 @@
+@import 'styles/main.scss';
+
+.container {
+  .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @include mb-s;
+    text-align: left;
+    list-style: none;
+    li {
+      padding-left: 24px;
+      text-indent: -24px;
+    }
+
+    .check {
+      &.green {
+        color: $green-100;
+      }
+      &.red {
+        color: $sienna-100;
+      }
+      @include mobile {
+        width: 20px;
+      }
+    }
+  }
+}

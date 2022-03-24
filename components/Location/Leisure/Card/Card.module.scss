@@ -1,0 +1,73 @@
+@import 'styles/main.scss';
+
+.card {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-gap: $space-xs;
+
+  &.full-width {
+    grid-template-columns: 100%;
+  }
+
+  .image {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    max-height: 75px;
+  }
+  &-content {
+    @include pt-xxs;
+    .error {
+      margin: 5px 0px 5px 0px;
+      @include text-s;
+    }
+    .name {
+      @include heading-m;
+      line-height: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 90%;
+    }
+    .rating-block {
+      display: flex;
+      height: 25px;
+      .yelp-rating {
+        width: 100px;
+        object-fit: contain;
+        @include mr-xxs;
+      }
+
+      .yelp-logo {
+        max-width: 50px;
+        object-fit: contain;
+      }
+    }
+    .counter,
+    .review,
+    .link {
+      @include text-xs;
+    }
+    .counter {
+      @include text-xs;
+      font-weight: 200;
+    }
+    .review {
+      max-width: 100%;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow-y: hidden;
+    }
+    .link {
+      color: $blue_100;
+      font-weight: 200;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

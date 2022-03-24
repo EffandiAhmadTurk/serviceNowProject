@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+         <loc>https://www.felixhomes.com/sitemap-listings.xml</loc>
+         <lastmod>2021-11-19T23:34:42.190Z</lastmod>
+       </sitemap>
+      <sitemap>
+         <loc>https://www.felixhomes.com/sitemap-landing.xml</loc>
+         <lastmod>2021-11-19T23:34:42.190Z</lastmod>
+       </sitemap>
+      <sitemap>
+         <loc>https://www.felixhomes.com/sitemap-blog.xml</loc>
+         <lastmod>2021-11-19T23:34:42.190Z</lastmod>
+       </sitemap>
+      <sitemap>
+         <loc>https://www.felixhomes.com/sitemap-cities.xml</loc>
+         <lastmod>2021-11-19T23:34:42.190Z</lastmod>
+       </sitemap>
+      <sitemap>
+         <loc>https://www.felixhomes.com/sitemap-listing-filters.xml</loc>
+         <lastmod>2021-11-19T23:34:42.190Z</lastmod>
+       </sitemap>
+      <sitemap>
+         <loc>https://www.felixhomes.com/sitemap-blog-categories.xml</loc>
+         <lastmod>2021-11-19T23:34:42.190Z</lastmod>
+       </sitemap>
+      <sitemap>
+         <loc>https://www.felixhomes.com/sitemap-zip-codes.xml</loc>
+         <lastmod>2021-11-19T23:34:42.190Z</lastmod>
+       </sitemap>
+      <sitemap>
+         <loc>https://www.felixhomes.com/sitemap-neighborhoods.xml</loc>
+         <lastmod>2021-11-19T23:34:42.190Z</lastmod>
+       </sitemap>
+      <sitemap>
+         <loc>https://www.felixhomes.com/sitemap-counties.xml</loc>
+         <lastmod>2021-11-19T23:34:42.190Z</lastmod>
+       </sitemap>
+      <sitemap>
+         <loc>https://www.felixhomes.com/sitemap-off-market-listings-1.xml</loc>
+         <lastmod>2021-11-19T23:34:42.190Z</lastmod>
+       </sitemap>
+      
+
+  </sitemapindex>

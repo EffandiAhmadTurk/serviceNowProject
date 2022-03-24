@@ -1,0 +1,111 @@
+@import '/styles/main.scss';
+
+.red {
+  background-color: $sienna-100;
+}
+.blue {
+  background-color: $blue-100;
+}
+.yellow {
+  background-color: $yellow-100;
+}
+.grey {
+  background-color: $black-40;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  transform: rotateZ(15deg);
+  position: absolute;
+  border-left: 45px solid transparent;
+  border-right: 45px solid transparent;
+  border-bottom: 60px solid #a7afbd;
+  left: 6px;
+  bottom: 11px;
+  background-color: transparent;
+  &.red {
+    border-bottom: 60px solid $sienna-100;
+  }
+  &.blue {
+    border-bottom: 60px solid $blue-100;
+  }
+  &.yellow {
+    border-bottom: 60px solid $yellow-100;
+  }
+  &.grey {
+    border-bottom: 60px solid $black-40;
+  }
+  &.light-grey {
+    border-bottom: 60px solid $black-20;
+  }
+
+  @include tablet {
+    border-left: 33px solid transparent;
+    border-right: 33px solid transparent;
+    border-bottom: 45px solid #a7afbd;
+    left: 6px;
+    bottom: 9px;
+
+    &.red {
+      border-bottom: 45px solid $sienna-100;
+    }
+    &.blue {
+      border-bottom: 45px solid $blue-100;
+    }
+    &.yellow {
+      border-bottom: 45px solid $yellow-100;
+    }
+    &.grey {
+      border-bottom: 45px solid $black-40;
+    }
+    &.light-grey {
+      border-bottom: 45px solid $black-20;
+    }
+  }
+
+  @include mobile {
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    left: 4px;
+    bottom: 5px;
+
+    &.red {
+      border-bottom: 30px solid $sienna-100;
+    }
+    &.blue {
+      border-bottom: 30px solid $blue-100;
+    }
+    &.yellow {
+      border-bottom: 30px solid $yellow-100;
+    }
+    &.grey {
+      border-bottom: 30px solid $black-40;
+    }
+    &.light-grey {
+      border-bottom: 30px solid $black-20;
+    }
+  }
+}
+.rectangle {
+  position: absolute;
+  transform: rotateZ(-5deg);
+  width: 75px;
+  height: 22px;
+  top: 8px;
+  right: 4px;
+
+  @include tablet {
+    width: 52px;
+    height: 15px;
+    top: 7px;
+    right: 4px;
+  }
+
+  @include mobile {
+    width: 36px;
+    height: 10px;
+    top: 6px;
+    right: 5px;
+  }
+}

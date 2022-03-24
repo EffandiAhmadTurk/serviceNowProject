@@ -1,0 +1,23 @@
+@import 'styles/main.scss';
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: $space-m;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+
+  .chart {
+    position: relative;
+    width: 100%;
+  }
+
+  .text {
+    @include paragraph;
+    strong {
+      font-weight: 200;
+    }
+  }
+}

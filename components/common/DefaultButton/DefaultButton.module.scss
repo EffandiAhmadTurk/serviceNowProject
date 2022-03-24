@@ -1,0 +1,71 @@
+@import 'styles/main.scss';
+
+.link {
+  display: inline-block;
+  width: 100%;
+}
+
+.button {
+  @include pr-l;
+  @include pl-l;
+  font-size: $text-m;
+  font-weight: 100;
+  border-radius: 10px;
+  width: 100%;
+  transition: 0.3s;
+  height: 50px;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.25px;
+}
+
+.button.primary {
+  background-color: $blue-100;
+  color: white;
+  &:hover {
+    background-color: $blue-80;
+    transition: 0.3s;
+  }
+}
+.button.primary-white {
+  background-color: white;
+  color: $black-100;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: 0.3s;
+  }
+}
+
+.button.primary-black {
+  color: white;
+  background-color: $black-100;
+  &:hover {
+    background-color: #233759e1;
+    transition: 0.3s;
+  }
+}
+
+.button.secondary {
+  background-color: white;
+  color: $blue_100;
+  border: 1px solid $blue_100;
+  &:hover {
+    background-color: $grey_100;
+  }
+}
+
+.button.secondary-white {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.main-button:hover {
+  background-color: $blue-80;
+  transition: 0.3s;
+}

@@ -1,0 +1,11 @@
+@import 'styles/main.scss';
+
+.container {
+  @include pt-s;
+  @include pb-s;
+  @include text-m;
+  text-align: center;
+  border-radius: 5px;
+  background-color: $blue_10;
+  width: 100%;
+}

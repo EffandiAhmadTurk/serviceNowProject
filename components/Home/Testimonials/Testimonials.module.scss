@@ -1,0 +1,95 @@
+@import 'styles/main.scss';
+
+.container {
+  position: relative;
+  & .pattern {
+    position: absolute;
+    top: $space-s;
+    left: $space-xxl;
+    max-height: 100px;
+    z-index: 0;
+    transform: translate(-50%, 20%);
+    @include tablet {
+      max-height: 50px;
+      transform: none;
+      left: $space-s;
+    }
+  }
+
+  & .wrapper {
+    @include pt-l;
+    @include mobile {
+      @include pt-m;
+    }
+    & .slider-wrapper {
+      // @include wrapper;
+      @include desktop {
+        display: none;
+      }
+      & .slide-wrapper {
+        width: 280px;
+      }
+      & div {
+        &:global(.swiper-container) {
+          width: 100%;
+        }
+        &:global(.swiper-wrapper) {
+          width: 50%;
+          height: 100% !important;
+          @include pb-xxl;
+        }
+        &:global(.swiper-slide) {
+          text-align: center;
+          width: auto;
+          height: auto;
+          box-sizing: border-box;
+        }
+        &:global(.slide-image) {
+          height: 400px;
+          width: auto;
+        }
+        &:global(.my-gallery) {
+          & figure {
+            margin: 0px;
+          }
+        }
+        &:global(.swiper-pagination) {
+          @include pb-m;
+          @include pt-m;
+          & span {
+            width: 15px;
+            height: 15px;
+            background-color: #fff;
+          }
+        }
+        &:global(.swiper-button-prev),
+        &:global(.swiper-button-next) {
+          display: none;
+        }
+      }
+    }
+    & .cards-wrapper {
+      display: none;
+      @include desktop {
+        max-width: 80%;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+      }
+    }
+    & .actions {
+      width: 225px;
+      margin: auto;
+      @include mt-l;
+      box-sizing: border-box;
+      @include tablet {
+        margin-top: 0;
+      }
+      @include mobile {
+        padding-left: calc(#{$space-xl} + #{$space-s});
+        padding-right: calc(#{$space-xl} + #{$space-s});
+        width: 100%;
+      }
+    }
+  }
+}

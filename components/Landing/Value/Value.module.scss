@@ -1,0 +1,63 @@
+@import 'styles/main.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  @include wrapper;
+  @include pt-l;
+  @include pb-l;
+  @include mobile {
+    @include pt-m;
+    @include pb-m;
+  }
+  & .wrapper {
+    max-width: 65%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+    @include tablet {
+      flex-direction: column;
+      align-items: flex-start;
+      max-width: 100%;
+    }
+    & .item {
+      max-width: calc(50% - #{$space-m});
+      width: 100%;
+      @include pl-l;
+      @include mb-m;
+      @include text-l;
+      font-weight: 200;
+      color: $black-80;
+      box-sizing: border-box;
+      white-space: nowrap;
+
+      @include tablet {
+        max-width: none;
+        padding-left: 0px;
+        @include pt-s;
+        @include pb-s;
+        margin-bottom: 0;
+      }
+      @include mobile {
+        @include text-s;
+      }
+      display: flex;
+      align-items: center;
+
+      &:last-child:not(:nth-child(even)) {
+        max-width: none;
+        justify-content: center;
+        @include tablet {
+          max-width: none;
+          justify-content: flex-start;
+        }
+      }
+    }
+    & .check {
+      color: $blue-100;
+      @include mr-l;
+    }
+  }
+}

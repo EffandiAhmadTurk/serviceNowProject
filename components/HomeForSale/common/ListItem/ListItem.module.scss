@@ -1,0 +1,31 @@
+@import 'styles/main.scss';
+
+.item {
+  @include pt-xs;
+  @include pb-xs;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid $blue_10;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .label {
+    @include text-m;
+    color: $black_80;
+    display: flex;
+    align-items: center;
+    line-height: 1.5;
+    svg {
+      @include mr-xs;
+      @include pb-xxs;
+      color: $blue_100;
+    }
+  }
+
+  .value {
+    @include text-m;
+    color: $black_100;
+    font-weight: 300;
+  }
+}

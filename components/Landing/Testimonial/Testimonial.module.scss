@@ -1,0 +1,193 @@
+@import 'styles/main.scss';
+
+.container {
+  @include mt-l;
+  @include mb-l;
+  @include mobile {
+    @include mt-m;
+    @include mb-m;
+  }
+  & .container {
+    @include container;
+    color: #fff;
+    & .wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include tablet {
+        flex-direction: column;
+      }
+      & .contents {
+        width: 100%;
+        max-width: 624px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @include tablet {
+          padding: 0;
+          margin-top: -32px;
+        }
+
+        & .contents-wrapper {
+          background-color: $black-100;
+          border-top-left-radius: 10px;
+          border-bottom-left-radius: 10px;
+          @include tablet {
+            border-radius: 10px;
+            @include mx-m;
+          }
+          overflow: hidden;
+          & .main-container {
+            @include pt-l;
+            @include pl-l;
+            @include pr-l;
+            @include ml-l;
+            @include mobile {
+              @include pt-l;
+              @include ml-m;
+              @include mr-m;
+              @include pl-m;
+              @include pr-m;
+            }
+            & .reviews {
+              display: flex;
+              justify-content: space-between;
+              @include mb-xs;
+              @include mobile {
+                flex-direction: column;
+                align-items: center;
+              }
+              & > span {
+                @include my-m;
+              }
+              & .google {
+                @include mt-s;
+                @include mobile {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  order: -1;
+                  margin: 0;
+                }
+
+                & > img {
+                  height: 30px;
+                }
+                & > div {
+                  display: flex;
+                  align-items: flex-end;
+                  & > span {
+                    @include text-s;
+                    @include mobile {
+                      @include text-xs;
+                      color: $yellow-100;
+                    }
+                    color: $yellow-100;
+                    &:first-child {
+                      @include mr-xxs;
+                      color: $black-60;
+                    }
+                  }
+                }
+              }
+            }
+            & .text-contents {
+              @include mr-xxl;
+              @include tablet {
+                margin: 0;
+              }
+              & > blockquote {
+                @include mb-xs;
+                & p {
+                  @include text-xl;
+                  color: #fff;
+                  position: relative;
+                  font-weight: 100;
+                  line-height: 1.4;
+                  @include mobile {
+                    @include text-m;
+                    text-align: center;
+                    color: #fff;
+                  }
+
+                  &::before {
+                    @include text-xxxxxl;
+                    content: '\201C';
+                    position: absolute;
+                    top: 0;
+                    left: -32px;
+                    color: #fff;
+                    transform: translate(0px, -20%);
+                    @include mobile {
+                      left: -22px;
+                    }
+                  }
+
+                  &::after {
+                    @include text-xxxxxl;
+                    content: '\201C';
+                    color: #fff;
+                    position: absolute;
+                    transform: translate(0px, -10%);
+                    @include ml-xs;
+                    @include mobile {
+                      right: -22px;
+                    }
+                  }
+                }
+              }
+              & > h6 {
+                @include text-m;
+                @include mb-m;
+                color: #fff;
+                white-space: pre-line;
+                line-height: 1.2;
+                @include mobile {
+                  @include text-s;
+                  color: #fff;
+                  text-align: center;
+                }
+              }
+            }
+          }
+
+          & .subtext {
+            @include pl-xl;
+            @include pt-m;
+            @include pb-m;
+            font-weight: 200;
+            background-color: $blue-100;
+          }
+        }
+      }
+      & .image-wrapper {
+        height: 464px;
+        border-radius: 20px;
+        max-width: 646px;
+        width: 100%;
+        overflow: hidden;
+        @include tablet {
+          order: -1;
+        }
+        @include mobile {
+          border-radius: 0;
+        }
+        @include mobile {
+          max-height: none;
+          height: 290px;
+        }
+
+        & .image {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+
+          @include mobile {
+            max-height: none;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

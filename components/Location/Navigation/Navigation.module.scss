@@ -1,0 +1,44 @@
+@import 'styles/main.scss';
+
+.container {
+  @include mr-xxl;
+  @include ml-xxl;
+
+  @include tablet {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
+  border-bottom: 1px solid $blue_10;
+  background-color: $grey_100;
+  position: sticky;
+  top: $desktop-nav-height;
+  z-index: 9;
+  transition: top 0.3s;
+
+  @include tablet {
+    top: $mobile-nav-height;
+  }
+
+  .tabs {
+    button {
+      @include text-s;
+      font-weight: 200;
+      text-transform: none;
+      color: $black_60;
+      &[aria-selected='true'] {
+        color: $blue_100;
+      }
+    }
+
+    span:nth-child(2) {
+      background: $blue_100;
+      height: 3px;
+    }
+  }
+}
+
+.section.is-hidden {
+  top: -100px;
+  transition: top 0.3s;
+}

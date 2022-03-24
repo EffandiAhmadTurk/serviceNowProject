@@ -1,0 +1,131 @@
+@import 'styles/main.scss';
+
+.close-button {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  display: flex;
+  align-items: center;
+  color: $black-80;
+  font-size: 16px;
+  @include tablet {
+    right: 20px;
+    top: -20px;
+  }
+  @include mobile {
+    right: 10px;
+    top: -40px;
+    font-size: 14px;
+  }
+}
+
+.container {
+  @include p-xl;
+  margin: auto;
+  background-color: white;
+  position: relative;
+  border-radius: 20px;
+  min-height: 200px;
+  min-width: 300px;
+
+  @include tablet {
+    @include p-m;
+  }
+
+  h2 {
+    // Overriding heading
+    @include tablet {
+      margin-left: 0px !important;
+      margin-right: 0px !important;
+    }
+  }
+
+  .form {
+    .row {
+      @include mb-m;
+      display: flex;
+      align-items: center;
+      @include tablet {
+        @include mb-s;
+      }
+    }
+
+    .last-row {
+      @include mb-m;
+    }
+
+    .line-1 {
+      @include tablet {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    .flex-block {
+      display: flex;
+      align-items: center;
+    }
+
+    .text {
+      @include text-xxl;
+      @include mr-xs;
+
+      @include tablet {
+        @include text-m;
+        @include mr-xs;
+        @include mb-xs;
+      }
+      @include mobile {
+        margin-bottom: 11px;
+      }
+    }
+
+    .error {
+      @include text-s;
+      text-align: center;
+      color: $sienna-100;
+    }
+    .button-container {
+      @include mb-s;
+      width: 50%;
+      position: relative;
+      display: grid;
+      align-items: start;
+      grid-template-columns: repeat(2, 1fr);
+      gap: $space-s;
+      @include mobile {
+        width: 100%;
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  .alt-actions {
+    @include text-m;
+    @include mt-xs;
+    text-align: center;
+    span {
+      color: $blue-100;
+      cursor: pointer;
+      &:hover {
+        color: $blue-80;
+      }
+    }
+  }
+
+  .login {
+    p {
+      @include text-m;
+      text-align: center;
+    }
+    span {
+      color: $blue-100;
+      cursor: pointer;
+      &:hover {
+        color: $blue-80;
+      }
+    }
+  }
+}

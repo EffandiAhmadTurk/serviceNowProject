@@ -1,0 +1,70 @@
+@import 'styles/main.scss';
+
+.container {
+  display: flex;
+  @include mt-m;
+  @include mb-m;
+  @include container;
+  & .wrapper {
+    @include wrapper;
+    width: 100%;
+    max-width: 1104px;
+    margin: auto;
+    & .items-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: $space-s;
+      @include tablet {
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+      }
+      @include mobile {
+        grid-gap: $space-m;
+        grid-template-columns: 1fr;
+      }
+
+      & .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & .icon-wrapper {
+          width: 60px;
+          height: 60px;
+          border-radius: 15px;
+          background-color: $blue-10;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          & > svg {
+            width: 50%;
+            color: $blue-100;
+          }
+        }
+
+        & label {
+          @include heading-xxxl;
+          font-weight: 400;
+          text-align: center;
+          @include mt-m;
+          @include mb-xs;
+          @include mobile {
+            @include mt-s;
+          }
+        }
+
+        & span {
+          @include text-m;
+          color: $black-60;
+          text-align: center;
+
+          & a {
+            text-decoration: underline;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

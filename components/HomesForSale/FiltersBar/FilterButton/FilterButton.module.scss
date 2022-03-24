@@ -1,0 +1,41 @@
+@import 'styles/main.scss';
+
+.button {
+  background-color: white;
+  max-width: 150px;
+  // @include pt-xxs;
+  // @include pb-xxs;
+  align-self: center;
+  @include pb-xs;
+  @include pt-xs;
+  @include pl-s;
+  @include pr-s;
+  font-size: $text-s;
+  font-weight: 200;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  transition: 0.2s;
+  border: 1px solid $blue-100;
+  color: $blue-100;
+  letter-spacing: 0.01em;
+  &:hover {
+    transition: 0.2s;
+    background-color: $grey-100;
+  }
+
+  @include tablet {
+    max-width: inherit;
+    width: 100%;
+    justify-content: center;
+    color: white;
+    background-color: $blue-100;
+    @include ml-l;
+    @include mr-l;
+  }
+
+  .icon {
+    @include mr-xs;
+  }
+}

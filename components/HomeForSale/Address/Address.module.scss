@@ -1,0 +1,83 @@
+@import 'styles/main.scss';
+
+.container {
+  @include pt-m;
+  @include pb-m;
+  @include pl-l;
+  @include pr-l;
+  border-radius: 20px;
+  background-color: $grey_100;
+  display: flex;
+  justify-content: space-between;
+  @include tablet {
+    border-radius: 0px;
+    @include p-m;
+  }
+  @include mobile {
+    border-radius: 0px;
+    @include p-s;
+  }
+  .address {
+    @include heading-xxxxl;
+    @include pb-m;
+    @include mb-xs;
+    position: relative;
+    .city-state-zip {
+      position: absolute;
+      @include text-l;
+      color: $black_80;
+    }
+  }
+  .quick-stats {
+    @include text-s;
+    color: $black_60;
+    display: flex;
+    align-items: center;
+
+    .stat {
+      @include mr-m;
+      display: flex;
+      align-items: center;
+
+      @include mobile {
+        @include mr-xs;
+      }
+      svg {
+        @include pb-xxs;
+        @include mr-xxs;
+      }
+    }
+  }
+
+  .price-wrapper {
+    text-align: end;
+
+    .price {
+      @include heading-xxl;
+      color: $blue-100;
+    }
+    .status-wrapper {
+      @include mt-xxs;
+      @include text-m;
+      svg {
+        @include mr-xxs;
+      }
+      svg.active {
+        color: $green-100;
+      }
+      svg.coming-soon {
+        color: $orange-100;
+      }
+      svg.pending {
+        color: $yellow-100;
+      }
+      svg.off-market {
+        color: $black-100;
+      }
+
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@import 'styles/main.scss';
+
+.container {
+  position: relative;
+  right: -100%;
+  width: 0%;
+  @include mt-m;
+  @include mb-m;
+  .map-sticky-container {
+    position: sticky;
+    top: calc(#{$desktop-nav-height} + 65px + 20px);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  &.full-map {
+    right: 0;
+    width: 50%;
+    @include mr-m;
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &.location-styles {
+    @include mt-s;
+    margin-bottom: 0px;
+    .map-sticky-container {
+      top: 150px;
+    }
+    &.full-map {
+      margin-right: 0px;
+    }
+  }
+
+  @include tablet {
+    display: none;
+  }
+}

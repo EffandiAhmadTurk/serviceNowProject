@@ -1,0 +1,28 @@
+@import 'styles/main.scss';
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: $space-m;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+
+  .chart {
+    position: relative;
+    width: 100%;
+  }
+
+  .total {
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0 0 10px;
+  }
+  .text {
+    @include paragraph;
+    strong {
+      font-weight: 200;
+    }
+  }
+}

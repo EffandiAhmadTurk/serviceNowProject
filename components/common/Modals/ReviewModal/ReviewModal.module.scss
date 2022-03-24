@@ -1,0 +1,10 @@
+@import 'styles/main.scss';
+
+.container {
+  h3 {
+    @include heading-xxl;
+  }
+  p {
+    @include paragraph;
+  }
+}

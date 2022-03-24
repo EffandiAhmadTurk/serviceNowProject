@@ -1,0 +1,178 @@
+@import 'styles/main.scss';
+
+.wrapper {
+  position: relative;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $black-100;
+
+  &.nav-offset {
+    top: $desktop-nav-height;
+  }
+
+  @include wrapper;
+  a {
+    text-decoration: none;
+  }
+
+  & .top {
+    display: flex;
+    @include pt-xxl;
+    @include pb-xxl;
+    @include pr-xl;
+    @include pl-xl;
+    box-sizing: border-box;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    @include tablet {
+      @include pr-xxs;
+      @include pl-xxs;
+      flex-direction: column;
+    }
+
+    & .social-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      & .logo {
+        @include mb-m;
+      }
+      & .socials-content {
+        & .phone {
+          @include mb-m;
+          @include text-m;
+          display: flex;
+          align-items: center;
+          color: #fff;
+          & > svg {
+            @include mr-xs;
+          }
+        }
+        & .socials {
+          display: flex;
+          & a {
+            @include mr-m;
+          }
+        }
+      }
+    }
+
+    & .right {
+      display: flex;
+      max-width: 786px;
+      width: 100%;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      @include tablet {
+        order: -1;
+      }
+      & .column-wrapper {
+        display: flex;
+        flex-direction: column;
+        @include tablet {
+          flex: 1;
+          flex-basis: 40%;
+          &:not(.more) {
+            order: 0;
+          }
+          &.more {
+            order: 1;
+            @include mt-xxl;
+          }
+          &:nth-child(3) {
+            order: 2;
+            @include mt-xxl;
+          }
+        }
+        h4 {
+          @include mb-l;
+          @include text-m;
+          color: #fff;
+          font-weight: 400;
+        }
+        a,
+        span {
+          @include mb-s;
+          @include text-m;
+          color: white;
+        }
+      }
+    }
+
+    & .left {
+      display: flex;
+      justify-content: center;
+      @include tablet {
+        justify-content: flex-start;
+        @include mt-xl;
+      }
+      @include mobile {
+        & .social-wrapper {
+          flex-direction: row;
+          width: 100%;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+
+  & .bottom {
+    position: relative;
+    display: flex;
+    height: 70px;
+    @include container;
+    @include wrapper;
+    @include pr-xl;
+    @include pl-xl;
+    max-width: 1200px;
+    margin: auto;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    @include text-s;
+    @include mobile {
+      @include text-xs;
+      color: #fff;
+    }
+    color: #fff;
+
+    & .border-top {
+      border-top: 1px solid $black-80;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    & .left {
+      display: flex;
+      align-items: center;
+      p {
+        @include mr-m;
+      }
+    }
+
+    & .right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      & .policy-terms {
+        & > a:not(:first-child) {
+          @include ml-xl;
+          @include mobile {
+            @include ml-m;
+          }
+        }
+      }
+    }
+  }
+
+  .bottom-mobile {
+    display: none;
+  }
+}

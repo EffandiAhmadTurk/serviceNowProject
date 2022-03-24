@@ -1,0 +1,92 @@
+@import '/styles/main.scss';
+
+.donut {
+  border-radius: 50%;
+  position: absolute;
+  width: 73px;
+  height: 73px;
+  bottom: 1px;
+  right: 1px;
+  box-sizing: border-box;
+
+  &.red {
+    border: 25px solid $sienna-100;
+  }
+
+  &.blue {
+    border: 25px solid $blue-100;
+  }
+
+  &.yellow {
+    border: 25px solid $yellow-100;
+  }
+
+  @include tablet {
+    width: 54px;
+    height: 54px;
+    bottom: 1px;
+    right: 1px;
+
+    &.red {
+      border: 18px solid $sienna-100;
+    }
+
+    &.blue {
+      border: 18px solid $blue-100;
+    }
+
+    &.yellow {
+      border: 18px solid $yellow-100;
+    }
+  }
+
+  @include mobile {
+    width: 35px;
+    height: 35px;
+    bottom: 1px;
+    right: 1px;
+
+    &.red {
+      border: 11px solid $sienna-100;
+    }
+
+    &.blue {
+      border: 11px solid $blue-100;
+    }
+
+    &.yellow {
+      border: 11px solid $yellow-100;
+    }
+  }
+}
+.rectangle {
+  position: absolute;
+  transform: rotateZ(-35deg);
+  width: 63px;
+  height: 18px;
+  top: 17px;
+  left: 4px;
+  &.red {
+    background-color: $sienna-100;
+  }
+  &.blue {
+    background-color: $blue-100;
+  }
+  &.yellow {
+    background-color: $yellow-100;
+  }
+
+  @include tablet {
+    width: 50px;
+    height: 14px;
+    top: 13px;
+    left: 2px;
+  }
+
+  @include mobile {
+    width: 36px;
+    height: 10px;
+    top: 9px;
+    left: 0px;
+  }
+}

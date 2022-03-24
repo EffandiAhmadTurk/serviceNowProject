@@ -1,0 +1,107 @@
+@import 'styles/main.scss';
+
+.container {
+  width: 100%;
+  display: flex;
+  border-radius: 10px;
+  background-color: #fff;
+  margin: auto;
+  max-width: calc(100% - 4 * #{$space-xxl});
+  @include shadow;
+  @include tablet {
+    border-radius: 0;
+    max-width: inherit;
+    box-shadow: none;
+  }
+  & .contents {
+    width: 100%;
+    @include mt-l;
+    @include mb-l;
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      @include mt-m;
+      @include mb-m;
+    }
+
+    & .cards {
+      display: flex;
+      justify-content: space-between;
+      height: 90px;
+      &.mb {
+        @include mb-l;
+      }
+
+      @include mx-xxl;
+      @include tablet {
+        @include mx-s;
+        height: 50px;
+        &.mb {
+          margin-bottom: 0;
+        }
+      }
+      & .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        cursor: pointer;
+        & .image-wrapper {
+          max-width: 190px;
+          height: 60px;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-sizing: border-box;
+          @include tablet {
+            width: 150px;
+            height: 60px;
+            overflow: hidden;
+          }
+          @include mobile {
+            width: 100px;
+            height: 30px;
+          }
+          & img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        & .rating {
+          display: flex;
+          align-items: center;
+          & .rate-value {
+            @include ml-xs;
+            @include text-xl;
+          }
+          @include tablet {
+            & svg {
+              width: 0.5em;
+            }
+            & .rate-value {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+
+    & .see-all {
+      @include mt-s;
+      text-align: center;
+      font-style: normal;
+      font-weight: 200;
+      font-size: 18px;
+      line-height: 140%;
+      letter-spacing: 0.0041em;
+      text-decoration-line: underline;
+      @include mobile {
+        @include text-s;
+      }
+      color: $blue-100 !important;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@import 'styles/main.scss';
+
+.image {
+  width: 100%;
+  object-fit: cover;
+  height: 40vh;
+  border-radius: 20px;
+  @include mb-m;
+  @include wrapper;
+  box-sizing: border-box;
+  display: inline-block;
+}

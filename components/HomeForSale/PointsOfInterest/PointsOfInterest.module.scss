@@ -1,0 +1,24 @@
+@import 'styles/main.scss';
+
+.container {
+  .wrapper {
+    @include wrapper;
+  }
+  .not-found {
+    text-align: center;
+    @include text-m;
+    @include mt-l;
+  }
+
+  .map {
+    border-radius: 20px;
+    overflow: hidden;
+    @include tablet {
+      border-radius: 0px;
+    }
+    @include mb-s;
+    svg {
+      color: white;
+    }
+  }
+}

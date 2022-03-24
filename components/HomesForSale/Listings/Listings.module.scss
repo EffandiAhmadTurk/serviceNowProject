@@ -1,0 +1,50 @@
+@import 'styles/main.scss';
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+
+  @include p-m;
+
+  &.map-container {
+    width: 50%;
+    &.location-styles {
+      width: 60%;
+    }
+  }
+
+  &.location-styles {
+    margin-top: 0px;
+    @include pt-s;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    @include tablet {
+      padding-right: 0px;
+    }
+  }
+
+  @include tablet {
+    @include p-s;
+  }
+
+  .listings {
+    @include mb-m;
+    display: grid;
+    height: auto;
+    grid-template-columns: repeat(4, calc(25% - 15px));
+    grid-gap: $space-m;
+    justify-content: center;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 33.333%);
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+  .listings.map-grid {
+    grid-template-columns: repeat(2, calc(50% - #{$space-s}));
+  }
+}

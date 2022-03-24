@@ -1,0 +1,59 @@
+@import 'styles/main.scss';
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 140px;
+  grid-column-gap: $space-m;
+  background-color: $grey-100;
+  border-radius: 20px;
+  @include p-xs;
+
+  @include mobile {
+    grid-template-rows: 90px;
+    grid-column-gap: $space-xs;
+    grid-template-columns: 1fr 3fr;
+  }
+
+  img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+  }
+  .content-wrapper {
+    overflow: hidden;
+    position: relative;
+    @include pt-s;
+    @include pb-s;
+    @include pr-xl;
+    @include tablet {
+      @include pr-l;
+    }
+    h4 {
+      @include heading-l;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      display: -webkit-box;
+    }
+    p {
+      @include text-m;
+      @include mobile {
+        display: none;
+      }
+    }
+    .icon {
+      position: absolute;
+      bottom: $space-xs;
+      right: $space-xs;
+      color: $blue-100;
+      @include mobile {
+        width: 25px;
+        bottom: $space-xxs;
+        right: $space-xxs;
+      }
+    }
+  }
+}

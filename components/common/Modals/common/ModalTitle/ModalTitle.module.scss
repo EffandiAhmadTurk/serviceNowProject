@@ -1,0 +1,20 @@
+@import 'styles/main.scss';
+
+.container {
+  @include mb-s;
+  h2 {
+    @include heading-xxxxl;
+    &.xxl {
+      @include heading-xxl;
+    }
+  }
+  @include mobile {
+    text-align: center;
+  }
+
+  &.left-align {
+    @include mobile {
+      text-align: start;
+    }
+  }
+}

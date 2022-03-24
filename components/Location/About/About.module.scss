@@ -1,0 +1,51 @@
+@import 'styles/main.scss';
+
+.container {
+  position: relative;
+
+  .rating-wrapper {
+    position: absolute;
+    right: 0;
+    top: -50px;
+    display: flex;
+    align-items: center;
+
+    @include tablet {
+      position: relative;
+      top: 0px;
+    }
+
+    .rating {
+      @include mr-xxs;
+    }
+
+    .score,
+    .link {
+      @include text-s;
+    }
+
+    .score {
+      @include mr-xs;
+    }
+
+    .link {
+      color: $blue-100;
+    }
+  }
+  .content-wrapper {
+    @include tablet {
+      @include pt-s;
+    }
+    h3 {
+      @include heading-xl;
+      @include mb-xxs;
+    }
+    p {
+      @include paragraph;
+      @include mb-s;
+    }
+    p:last-of-type {
+      margin-bottom: 0px;
+    }
+  }
+}

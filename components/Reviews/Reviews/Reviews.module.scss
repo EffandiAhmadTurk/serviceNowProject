@@ -1,0 +1,30 @@
+@import 'styles/main.scss';
+
+.container {
+  @include container;
+  @include wrapper;
+  @include mt-xl;
+  @include mb-m;
+  @include mobile {
+    @include mt-m;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  & .items-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: $space-m;
+    grid-column-gap: $space-m;
+    align-items: center;
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

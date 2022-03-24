@@ -1,0 +1,35 @@
+@import 'styles/main.scss';
+
+.container {
+  @include pt-xxl;
+  @include pb-xxl;
+  @include pl-xl;
+  @include pr-xl;
+  @include mt-l;
+  @include mb-l;
+  @include ml-xl;
+  @include mr-xl;
+  position: relative;
+
+  @include mobile {
+    @include p-s;
+    @include pt-xl;
+    @include pb-xl;
+    @include m-m;
+  }
+  .pattern {
+    width: 60px;
+    position: absolute;
+    @include mobile {
+      width: 40px;
+    }
+    &.pattern-one {
+      top: 0px;
+      left: 0px;
+    }
+    &.pattern-two {
+      bottom: 0px;
+      right: 0px;
+    }
+  }
+}

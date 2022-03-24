@@ -1,0 +1,34 @@
+@import 'styles/main.scss';
+
+.container {
+  .image {
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    min-width: 150px;
+    @include mb-xxs;
+  }
+  .description {
+    .price {
+      @include text-l;
+    }
+    .details {
+      @include mt-xxs;
+      @include text-xs;
+
+      span {
+        @include pr-xs;
+        @include pl-xs;
+        border-right: 1px solid $black-40;
+
+        &:nth-child(1) {
+          padding-left: 0;
+        }
+
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
+  }
+}

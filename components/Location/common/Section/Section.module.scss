@@ -1,0 +1,49 @@
+@import '/styles/main.scss';
+
+.container {
+  @include wrapper;
+  &.container-width {
+    @include container;
+    @include wrapper;
+  }
+
+  @include my-l;
+  .heading-wrapper {
+    @include mb-xs;
+    display: grid;
+    grid-template-columns: 60px calc(100% - 60px);
+    align-items: center;
+    grid-gap: $space-s;
+
+    @include mobile {
+      grid-template-columns: 40px calc(100% - 45px);
+    }
+
+    h2 {
+      @include heading-xxxl;
+    }
+
+    .icon {
+      height: 60px;
+      width: 60px;
+      background-color: $blue_10;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 15px;
+
+      @include mobile {
+        height: 40px;
+        width: 40px;
+        border-radius: 5px;
+      }
+      svg {
+        color: $blue_100;
+
+        @include mobile {
+          width: 20px;
+        }
+      }
+    }
+  }
+}

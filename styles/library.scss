@@ -1,0 +1,70 @@
+// colors
+$royal-blue: #4c88f8;
+$royal-blue-hover: #3378f7;
+$mint: #39c2aa;
+$mint-hover: #34ad97;
+$dark-mint: #25af97;
+$navy: #072967;
+$dark-navy: #021e41;
+$yellow: #ffcd59;
+$light-yellow: #ffdd82;
+$highlight: #ffeab9;
+$light-blue: #f2f6fe;
+$dark-blue: #1c315a;
+$coral: #f36966;
+$coral-hover: #f3514e;
+$error-red: #ff5a5a;
+$blue: #1f4a7f;
+$beige: #f9f4f2;
+$rose: #fcdfe1;
+$purple: #794cf8;
+$orange: #e5712b;
+
+// Greys
+$grey-1: #e7eaf0;
+$grey-2: #cdd4e1;
+$grey-3: #b5bfd2;
+$grey-4: #9ca9c2;
+$grey-5: #8394b3;
+$grey-6: #f2f4f7;
+$grey-7: #526a95;
+
+// Device breakpoints
+$mobile-breakpoint: 768px;
+$tablet-breakpoint: 1024px;
+
+// Desktop device
+@mixin desktop {
+  @media (min-width: #{$tablet-breakpoint + 1}) {
+    @content;
+  }
+}
+
+// tablet device
+@mixin tablet {
+  @media (max-width: #{$tablet-breakpoint}) {
+    @content;
+  }
+}
+
+// mobile device
+@mixin mobile {
+  @media (max-width: #{$mobile-breakpoint - 1px}) {
+    @content;
+  }
+}
+
+//custom mixins
+@mixin coverdiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+}
+@mixin transition($prop: all, $dur: 0.3s, $ease: ease) {
+  -webkit-transition: $prop $dur $ease;
+  -moz-transition: $prop $dur $ease;
+  transition: $prop $dur $ease;
+}

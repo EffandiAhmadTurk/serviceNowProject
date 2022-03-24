@@ -1,0 +1,22 @@
+@import 'styles/main.scss';
+
+.container {
+  @include mt-s;
+  @include text-m;
+  text-align: center;
+  color: $black-80;
+  @include mobile {
+    @include mt-xs;
+  }
+  button {
+    background-color: transparent;
+    @include text-m;
+    color: $blue-100;
+    padding: 0px;
+    transition: 0.2s;
+    &:hover {
+      color: $blue-80;
+      transition: 0.2s;
+    }
+  }
+}

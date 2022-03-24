@@ -1,0 +1,10 @@
+@import 'styles/main.scss';
+
+.container {
+  @include wrapper;
+  @include mt-l;
+  @include mb-l;
+  h3 {
+    @include heading-xxxxl;
+  }
+}

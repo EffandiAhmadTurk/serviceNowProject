@@ -1,0 +1,61 @@
+@import 'styles/main.scss';
+
+.container {
+  @include mt-m;
+  @include tablet {
+    @include mt-xs;
+  }
+
+  .content {
+    @include mt-s;
+    @include tablet {
+      @include mt-xs;
+    }
+  }
+
+  .heading {
+    @include pt-xs;
+    @include pb-xs;
+    @include wrapper;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+    border-bottom: 1px solid $blue_10;
+
+    @include tablet {
+      position: sticky;
+      top: $mobile-nav-height;
+      z-index: 3;
+    }
+    h2 {
+      @include heading-xxl;
+    }
+    .toggle {
+      background-color: transparent;
+      color: $blue_100;
+      transition: 0.2s;
+      border-radius: 100%;
+      height: 30px;
+      width: 30px;
+      @include tablet {
+        border: 1px solid $blue_60;
+        height: 25px;
+        width: 25px;
+      }
+      &:hover {
+        transition: 0.2s;
+        background-color: $blue_10;
+      }
+    }
+    .toggle.open {
+      transition: 0.3s;
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.content.open {
+  height: 0px;
+  overflow: hidden;
+}

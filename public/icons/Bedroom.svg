@@ -1,0 +1,12 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="4.80273" y="18.001" width="2.3991" height="5.99993" fill="#4F5F7A"/>
+<rect x="5" width="2" height="10" fill="#4F5F7A"/>
+<rect x="19" y="2" width="2" height="14" transform="rotate(90 19 2)" fill="#4F5F7A"/>
+<rect x="13" y="10" width="2" height="6" transform="rotate(-180 13 10)" fill="#4F5F7A"/>
+<rect x="16.8022" y="18.001" width="2.39909" height="5.99993" fill="#4F5F7A"/>
+<rect x="17" width="2" height="10" fill="#4F5F7A"/>
+<mask id="path-7-inside-1" fill="white">
+<path d="M24 17.6578C24 18.5099 23.3092 19.2007 22.4572 19.2007L1.54284 19.2007C0.690754 19.2007 6.03882e-08 18.5099 1.34881e-07 17.6578C5.81837e-07 12.5453 4.14453 8.40078 9.25706 8.40078L14.7429 8.40078C19.8555 8.40079 24 12.5453 24 17.6578Z"/>
+</mask>
+<path d="M24 17.6578C24 18.5099 23.3092 19.2007 22.4572 19.2007L1.54284 19.2007C0.690754 19.2007 6.03882e-08 18.5099 1.34881e-07 17.6578C5.81837e-07 12.5453 4.14453 8.40078 9.25706 8.40078L14.7429 8.40078C19.8555 8.40079 24 12.5453 24 17.6578Z" stroke="#4F5F7A" stroke-width="4" mask="url(#path-7-inside-1)"/>
+</svg>

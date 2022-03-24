@@ -1,0 +1,79 @@
+@import 'styles/main.scss';
+
+.desktop-container {
+  @include pt-m;
+  @include pb-m;
+  @include pl-l;
+  @include pr-l;
+  @include shadow;
+  border: 1px solid $blue_40;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  background-color: white;
+
+  svg {
+    color: $blue-100;
+    @include mb-xs;
+  }
+
+  h3 {
+    @include mb-xs;
+    text-align: center;
+    @include heading-xl;
+    span {
+      color: $green_100;
+    }
+  }
+  p {
+    @include text-s;
+    @include mb-s;
+    text-align: center;
+    line-height: 1.5;
+    a {
+      color: $blue_100;
+    }
+  }
+  a {
+    width: 100%;
+  }
+}
+
+.mobile-container {
+  background-color: white;
+  @include pb-xs;
+  @include shadow;
+  border-top: 1px solid $grey-100;
+
+  .wrapper {
+    box-sizing: border-box;
+    @include tablet {
+      width: 60%;
+      margin: auto;
+    }
+    @include mobile {
+      width: 100%;
+      @include pl-l;
+      @include pr-l;
+    }
+  }
+
+  h3 {
+    @include pt-xxs;
+    @include pb-xxs;
+    @include text-s;
+    font-weight: 200;
+    text-align: center;
+  }
+
+  span {
+    color: $green_100;
+    font-weight: 200;
+  }
+
+  a {
+    color: $blue_100;
+    font-weight: 200;
+  }
+}

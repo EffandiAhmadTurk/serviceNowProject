@@ -1,0 +1,59 @@
+@import 'styles/library.scss';
+
+.modal-footer-container {
+  .footer-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: auto;
+
+    @include mobile {
+      flex-direction: column;
+    }
+
+    .button-gap {
+      width: 15px;
+      @include mobile {
+        display: none;
+      }
+    }
+
+    .footer-button {
+      border: 1px solid $royal-blue;
+      padding: 10px 15px 10px 10px;
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      cursor: pointer;
+      outline: none;
+      @include mobile {
+        margin-bottom: 10px;
+      }
+
+      span {
+        font-weight: 500;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 18px;
+        color: $royal-blue;
+        padding: 0 15px;
+        cursor: pointer;
+        transition: color 0.2s;
+        &:hover {
+          transition: color 0.2s;
+          color: $royal-blue-hover;
+        }
+      }
+
+      .desktop-link {
+        display: block;
+      }
+
+      .mobile-link {
+        display: none;
+      }
+    }
+  }
+}

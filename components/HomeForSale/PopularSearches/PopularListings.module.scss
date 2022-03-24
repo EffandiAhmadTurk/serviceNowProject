@@ -1,0 +1,40 @@
+@import 'styles/main.scss';
+
+.container {
+  @include container;
+  @include mb-l;
+  @include wrapper;
+  @include tablet {
+    flex-direction: column;
+  }
+
+  h3 {
+    @include heading-xl;
+    @include mb-s;
+  }
+
+  .column {
+    &-title {
+      @include mobile {
+        width: 100%;
+      }
+    }
+    &-link {
+      @include text-s;
+      @include mb-xs;
+      color: $blue_100;
+      width: 25%;
+      display: inline-block;
+      &:hover {
+        text-decoration: underline;
+      }
+      @include tablet {
+        width: 50%;
+      }
+
+      @include mobile {
+        width: 100%;
+      }
+    }
+  }
+}

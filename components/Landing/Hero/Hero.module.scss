@@ -1,0 +1,101 @@
+@import 'styles/main.scss';
+
+.hero {
+  display: block;
+  position: relative;
+  z-index: 1;
+  .background {
+    position: absolute;
+    height: 100%;
+    z-index: -1;
+    width: 100%;
+    border-radius: 0px 0px 40px 40px;
+    overflow: hidden;
+
+    &.with-image {
+      width: 65%;
+      background-position: left top;
+      background-repeat: no-repeat;
+      border-radius: 0px 0px 40px 0px;
+      @include tablet {
+        width: 100%;
+        border-radius: 0px;
+      }
+    }
+    @include tablet {
+      border-radius: 0px;
+    }
+  }
+
+  @include tablet {
+    background-size: cover;
+    & .image {
+      display: none;
+    }
+  }
+
+  .container {
+    padding-top: $desktop-nav-height;
+    @include tablet {
+      padding-top: $mobile-nav-height;
+    }
+    .heading-wrapper {
+      h1 {
+        @include heading-xxxxxl;
+        @include mb-xxs;
+        color: white;
+
+        @include mobile {
+          @include mt-m;
+        }
+      }
+      &.wo-image {
+        max-width: 600px;
+        margin: auto;
+      }
+      h2 {
+        @include heading-xl;
+        @include mb-m;
+        color: white;
+        @include mobile {
+          @include mb-xxs;
+        }
+      }
+      .chip {
+        @include pt-xs;
+        @include pb-xs;
+        @include pl-xl;
+        @include pr-xl;
+        @include text-m;
+        border: 1px solid white;
+        border-radius: 10px;
+        color: white;
+        background-color: rgba(255, 255, 255, 0.2);
+        display: inline-block;
+        @include mobile {
+          @include mt-xs;
+        }
+      }
+    }
+  }
+
+  .reviews-container {
+    @include mt-l;
+    @include tablet {
+      margin-top: 0px;
+      padding-top: 0px;
+    }
+    .reviews-wrapper {
+      width: 100%;
+      position: absolute;
+      bottom: 0px;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      @include tablet {
+        position: relative;
+        left: inherit;
+        transform: inherit;
+      }
+    }
+  }
+}

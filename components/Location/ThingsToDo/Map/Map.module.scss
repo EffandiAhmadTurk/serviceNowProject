@@ -1,0 +1,40 @@
+@import 'styles/main.scss';
+
+.map-container {
+  .icon {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include p-m;
+    background-color: red;
+  }
+
+  .fab {
+    width: 20px;
+    height: 20px;
+    box-shadow: none;
+    border-radius: 100%;
+    cursor: pointer;
+    &.green {
+      background-color: $green-100;
+    }
+    &.blue {
+      background-color: $blue-100;
+    }
+    &.yellow {
+      background-color: $yellow-100;
+    }
+    &.orange {
+      background-color: $orange-100;
+    }
+    &.purple {
+      background-color: $purple-100;
+    }
+    &.red {
+      background-color: $sienna-100;
+    }
+  }
+}

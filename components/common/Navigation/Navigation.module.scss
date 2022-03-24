@@ -1,0 +1,352 @@
+@import "styles/main.scss";
+
+.container {
+  @include tablet {
+    @include wrapper;
+  }
+
+  display: flex;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  height: $desktop-nav-height;
+  @include tablet {
+    height: $mobile-nav-height;
+  }
+  & .bg-overlay {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+
+    &.bg-black {
+      background-color: #fff;
+    }
+  }
+
+  & .wrapper {
+    display: flex;
+    max-width: 1440px;
+    margin: auto;
+    width: 100%;
+    align-items: center;
+    box-sizing: border-box;
+    @include desktop {
+      @include pl-xxl;
+      @include pr-xxl;
+    }
+
+    &.content {
+      @include desktop {
+        @media (max-width: 1440px) {
+          padding-left: calc(#{$space-xxl} + #{$space-m});
+          padding-right: calc(#{$space-xxl} + #{$space-m});
+        }
+      }
+    }
+
+    & .logo-wrapper {
+      @include mr-xl;
+      &:not(.black) {
+        & .logo {
+          &-black,
+          &-mobile {
+            display: none;
+          }
+          @include tablet {
+            @include mr-xs;
+          }
+        }
+      }
+      &.black {
+        & .logo {
+          &-white,
+          &-mobile {
+            display: none;
+          }
+          @include tablet {
+            @include mr-xs;
+          }
+        }
+      }
+    }
+
+    & .items-wrapper {
+      color: $black-100;
+      display: flex;
+      width: 100%;
+      @include tablet {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      & .mobile-menu-button {
+        background: none;
+        border: none;
+        outline: none;
+        filter: brightness(100);
+        display: flex;
+        @include desktop {
+          padding: 0;
+        }
+        @include tablet {
+          width: 60px;
+          height: 60px;
+          background-image: url("/icons/burger.svg");
+          background-position: 18px 20px;
+          background-repeat: no-repeat;
+          cursor: pointer;
+          position: relative;
+        }
+        @include mobile {
+          width: 50px;
+          height: 50px;
+          background-position: 10px 15px;
+        }
+        &.black {
+          filter: none;
+        }
+      }
+
+      & .menu-items {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include tablet {
+          display: none;
+        }
+        & .links {
+          display: flex;
+          align-items: center;
+          .link {
+            @include mr-l;
+            @include text-m;
+            font-weight: 200;
+            color: #fff;
+            cursor: pointer;
+            &.active {
+              color: $blue-100;
+            }
+          }
+          &.black {
+            & .link {
+              color: $black-100;
+              &.active {
+                color: $blue-100;
+              }
+            }
+          }
+        }
+      }
+
+      & .show {
+        display: block !important;
+      }
+
+      & .right-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        & .phone {
+          letter-spacing: 1px;
+          display: flex;
+          align-items: center;
+          @include text-m;
+          @include mr-l;
+          @include ml-l;
+
+          font-weight: 200;
+          svg {
+            @include mr-xxs;
+            width: 26px;
+            color: $blue-100;
+          }
+        }
+        & .buttons {
+          display: flex;
+          align-items: center;
+
+          & .auth-buttons {
+            display: flex;
+            background: transparent;
+
+            & .auth-icon {
+              transition: all 200ms;
+              color: $blue-100;
+              background: #fff;
+              border-radius: 100%;
+              width: 26px;
+              @include p-xxs;
+              &.content:not(.black) {
+                color: #fff;
+                background-color: $blue-100;
+              }
+            }
+          }
+        }
+        & .buttons {
+          & .auth-buttons {
+            & .logout {
+              & > button {
+                height: 40px;
+                transition: 0.2s;
+                background-color: transparent;
+                font-weight: 200;
+                &:hover {
+                  background-color: $blue-10;
+                }
+              }
+              &.content {
+                &:not(.black) > button {
+                  color: #fff;
+                  border-color: #fff;
+                  &:hover {
+                    background-color: transparent;
+                    opacity: 0.75;
+                  }
+                }
+              }
+            }
+          }
+        }
+        &.landing {
+          & .phone {
+            color: $black-100;
+          }
+        }
+        &.content {
+          & .phone,
+          .phone-icon {
+            color: #fff;
+            fill: white;
+          }
+          & .phone {
+            &.black {
+              color: $black-100;
+              .phone-icon {
+                color: $black-100;
+                fill: $blue-100;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.dropdown {
+  overflow: hidden;
+  font-weight: 500;
+
+  .drop-btn {
+    background-color: inherit;
+    padding: 0;
+  }
+  .dropdown-content {
+    display: none;
+    background-color: $grey-60;
+    min-width: 130px;
+    z-index: 1;
+    position: absolute;
+    top: 70px;
+
+    a,
+    button {
+      outline: none;
+      border: none;
+      background: none;
+      float: none;
+      @include text-m;
+      color: $black-80;
+      margin: auto;
+      height: 42px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 300;
+      display: block;
+      &:hover {
+        color: $blue-100;
+      }
+    }
+  }
+}
+
+.drawer-box {
+  width: 80vw;
+  max-width: 310px;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  display: none;
+  @include tablet {
+    display: flex;
+  }
+
+  .phone-top {
+    display: flex;
+    align-items: center;
+    @include pt-m;
+    @include pb-m;
+    @include text-m;
+    @include pl-m;
+    color: $black-80;
+    font-weight: 200;
+
+    img {
+      vertical-align: middle;
+      margin-right: 12px;
+    }
+  }
+
+  .menu-link {
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+    @include text-m;
+    @include pl-xl;
+    color: $black-80;
+    font-weight: 200;
+    &:nth-child(even) {
+      background-color: $grey-60;
+    }
+  }
+}
+
+.buttons {
+  @include tablet {
+    .auth-buttons {
+      display: flex;
+      margin: auto;
+      @include mt-xl;
+      @include mb-m;
+
+      .auth-button {
+        display: flex;
+        @include text-m;
+        font-weight: 200;
+        background: none;
+        flex: 1;
+        align-items: center;
+        outline: none;
+        color: $blue-100;
+        justify-content: center;
+        width: 50%;
+        @include mr-m;
+        @include ml-m;
+        @include pt-m;
+        @include pb-m;
+      }
+    }
+  }
+}

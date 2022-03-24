@@ -1,0 +1,168 @@
+@import 'styles/main.scss';
+
+.container {
+  @include pl-xxl;
+  @include pr-xxl;
+  @include pt-m;
+  @include pb-m;
+
+  background-color: $grey-100;
+
+  @include tablet {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+
+  .error {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    p {
+      @include text-m;
+      margin: 0;
+    }
+  }
+
+  .content {
+    @include paragraph;
+    @include tablet {
+      margin-left: 0px;
+    }
+    .text {
+      @include mb-s;
+      a {
+        color: $blue-100;
+        :hover {
+          color: $blue-10;
+        }
+      }
+      h3 {
+        @include heading-l;
+      }
+      p {
+        @include paragraph;
+      }
+    }
+
+    .table {
+      min-height: 300px;
+      position: relative;
+      @include tablet {
+        margin: 20px 0 0;
+      }
+      .tabs {
+        background: $black-100;
+        span {
+          background: $blue-100;
+          height: 3px;
+        }
+        button > span {
+          background: $black-100;
+          color: white;
+        }
+      }
+    }
+
+    .great-schools {
+      @include mt-s;
+      text-align: right;
+    }
+    .school-item {
+      @include pr-s;
+      @include pl-s;
+      @include pt-xs;
+      @include pb-xs;
+      @include text-s;
+      display: flex;
+      align-items: center;
+      background-color: $grey-10;
+      border-bottom: 1px solid $grey-100;
+      @include tablet {
+        display: none;
+      }
+      .cell {
+        &-1 {
+          flex: 5;
+        }
+        &-2 {
+          flex: 1;
+        }
+        &-3 {
+          flex: 3;
+        }
+        &-4 {
+          flex: 3;
+        }
+        &-5 {
+          flex: 2;
+        }
+      }
+    }
+    .mobile-school-item {
+      background-color: $grey-10;
+      @include p-xs;
+      display: none;
+      @include tablet {
+        display: flex;
+      }
+      .description {
+        @include ml-xs;
+        .name {
+          @include text-s;
+          font-weight: 200;
+        }
+
+        .students,
+        .grades,
+        .type {
+          @include text-s;
+          color: $black-60;
+        }
+        .grades {
+          @include mr-xs;
+        }
+        .wrapper {
+          display: flex;
+          margin: 5px 0;
+        }
+      }
+    }
+    .school-rating {
+      @include text-xs;
+      font-weight: 200;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      line-height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 1px;
+      &.no-rating-color {
+        background-color: $black-20;
+        color: $black-80;
+      }
+
+      &.rating-color-10,
+      &.rating-color-9,
+      &.rating-color-8 {
+        background-color: $green-100;
+        color: white;
+      }
+      &.rating-color-7,
+      &.rating-color-6,
+      &.rating-color-5,
+      &.rating-color-4 {
+        background-color: $yellow-100;
+        color: white;
+      }
+      &.rating-color-3,
+      &.rating-color-2,
+      &.rating-color-1 {
+        background-color: $sienna-100;
+        color: white;
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@import 'styles/main.scss';
+
+.container {
+  @include p-m;
+  @include mb-s;
+  border-radius: 10px;
+  background-color: $grey-100;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+
+  .text-wrapper {
+    flex: 5;
+  }
+
+  .title {
+    @include mt-xxs;
+    @include heading-m;
+  }
+
+  .description {
+    @include mt-xxs;
+    @include paragraph;
+    @include mobile {
+      @include text-s;
+      line-height: 1.5;
+    }
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+    a {
+      color: $blue-100;
+    }
+  }
+
+  .button-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      display: flex;
+      background-color: transparent;
+      color: $black-100;
+    }
+    img {
+      margin-right: 20px;
+    }
+  }
+}
+
+@include mobile {
+  .question-wrapper {
+    padding-bottom: 20px;
+    margin-top: 20px;
+
+    .description {
+      font-size: 14px;
+      padding-right: 20px;
+    }
+  }
+}

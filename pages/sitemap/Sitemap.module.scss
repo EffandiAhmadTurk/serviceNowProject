@@ -1,0 +1,73 @@
+@import 'styles/library.scss';
+
+.sitemap {
+  margin-left: 40px;
+  margin-right: 40px;
+
+  @include tablet {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  h1 {
+    padding: 20px 0px;
+    color: $navy;
+  }
+  .section {
+    margin: 20px 0px 30px 0px;
+
+    h2 {
+      color: $navy;
+      margin: 10px 0px;
+      padding: 5px 0px;
+      border-bottom: 1px solid $grey-3;
+    }
+
+    .locations {
+      display: flex;
+      flex-wrap: wrap;
+
+      .location {
+        padding: 5px 0px;
+        width: 25%;
+        font-size: 16px;
+        color: $royal-blue;
+        @include tablet {
+          width: 100%;
+          font-size: 16px;
+          padding: 10px 0px;
+        }
+      }
+    }
+  }
+}
+
+.sitemap-listing {
+  margin-left: 40px;
+  margin-right: 40px;
+
+  @include tablet {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  h1 {
+    padding: 20px 0px;
+    border-bottom: 1px solid $grey-3;
+    color: $navy;
+  }
+  .section {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0px 30px 0px;
+    .listing {
+      padding: 5px 0px;
+      width: 33%;
+      font-size: 16px;
+      color: $royal-blue;
+      @include tablet {
+        width: 100%;
+        font-size: 16px;
+        padding: 10px 0px;
+      }
+    }
+  }
+}

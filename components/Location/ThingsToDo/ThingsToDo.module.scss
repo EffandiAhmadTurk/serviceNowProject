@@ -1,0 +1,103 @@
+@import 'styles/main.scss';
+
+.container {
+  .content {
+    @include mb-s;
+
+    p {
+      @include paragraph;
+    }
+    a {
+      color: $blue-100;
+      :hover {
+        color: $blue-80;
+      }
+    }
+    h3 {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 110%;
+
+      margin: 0 0 10px;
+    }
+  }
+  .map-container {
+    border-radius: 20px;
+    overflow: hidden;
+    @include mb-s;
+  }
+  .card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: $space-s;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+    .card {
+      border: 1px solid $blue-10;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      @include pt-xs;
+      @include pb-xs;
+      @include pl-s;
+      @include pr-s;
+
+      .col {
+        display: flex;
+        flex: 2;
+      }
+
+      .icon {
+        height: 40px;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        &.blue {
+          color: $blue-100;
+          background-color: $blue-10;
+        }
+        &.green {
+          color: $green-100;
+          background-color: $green-10;
+        }
+        &.yellow {
+          color: $yellow-100;
+          background-color: $yellow-10;
+        }
+        &.red {
+          color: $sienna-100;
+          background-color: $sienna-10;
+        }
+        &.purple {
+          color: $purple-100;
+          background-color: $purple-10;
+        }
+        &.orange {
+          color: $orange-100;
+          background-color: $orange-10;
+        }
+      }
+
+      .description {
+        @include ml-xs;
+        flex: 2;
+      }
+
+      .title {
+        @include heading-m;
+        line-height: 1.2;
+      }
+      .text {
+        flex: 1;
+        @include text-xs;
+        @include mobile {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}

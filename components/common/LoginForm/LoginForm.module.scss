@@ -1,0 +1,15 @@
+@import 'styles/main.scss';
+
+.forgot-password {
+  @include text-m;
+  @include mt-xxs;
+  @include mb-s;
+  text-align: right;
+  cursor: pointer;
+  transition: color 0.2s;
+  color: $blue-100;
+  &:hover {
+    color: $blue-80;
+    transition: color 0.2s;
+  }
+}

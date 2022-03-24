@@ -1,0 +1,74 @@
+@import 'styles/main.scss';
+
+.spacer {
+  content: '';
+  height: 0px;
+  box-sizing: border-box;
+  &.hide-on-mobile {
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &.m-xxl {
+    @include mt-xxl;
+    @include tablet {
+      @include mt-l;
+    }
+  }
+  &.m-xl {
+    @include mt-xl;
+    @include tablet {
+      @include mt-l;
+    }
+  }
+  &.m-l {
+    @include mt-l;
+    @include tablet {
+      @include mt-m;
+    }
+  }
+  &.m-m {
+    @include mt-m;
+    @include tablet {
+      @include mt-s;
+    }
+  }
+  &.m-s {
+    @include mt-s;
+    @include tablet {
+      @include mt-xs;
+    }
+  }
+
+  &.p-xxl {
+    @include pt-xxl;
+    @include tablet {
+      @include pt-l;
+    }
+  }
+  &.p-xl {
+    @include pt-xl;
+    @include tablet {
+      @include pt-l;
+    }
+  }
+  &.p-l {
+    @include pt-l;
+    @include tablet {
+      @include pt-m;
+    }
+  }
+  &.p-m {
+    @include pt-m;
+    @include tablet {
+      @include pt-s;
+    }
+  }
+  &.p-s {
+    @include pt-s;
+    @include tablet {
+      @include pt-xs;
+    }
+  }
+}

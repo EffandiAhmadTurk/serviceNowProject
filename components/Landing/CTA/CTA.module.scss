@@ -1,0 +1,40 @@
+@import 'styles/main.scss';
+
+.container {
+  background-color: $yellow-100;
+  @include container;
+  @include wrapper;
+  @include pt-l;
+  @include pb-l;
+  @include tablet {
+    @include pt-xl;
+    @include pb-xl;
+  }
+  & .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    @include tablet {
+      padding: 0;
+      flex-direction: column;
+      align-content: center;
+    }
+    & .actions {
+      display: flex;
+      @include desktop {
+        @include ml-m;
+      }
+      @include tablet {
+        width: 100%;
+        @include pl-xl;
+        @include pr-xl;
+        box-sizing: border-box;
+      }
+    }
+  }
+
+  & .eyebrow-black {
+    color: $black-100;
+  }
+}

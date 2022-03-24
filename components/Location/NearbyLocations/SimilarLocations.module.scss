@@ -1,0 +1,40 @@
+@import 'styles/main.scss';
+
+.container {
+  @include mt-m;
+  @include mb-m;
+
+  h2 {
+    @include heading-xxxxl;
+    @include mb-m;
+    text-align: center;
+  }
+  @include pb-l;
+  @include mb-l;
+
+  .slide {
+    background-color: $black-100;
+    height: 250px;
+    @include ml-s;
+    @include mr-s;
+    @include heading-xxl;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 20px;
+    .pattern {
+      position: absolute;
+      width: 60px;
+    }
+    .pattern-one {
+      top: 15%;
+      left: 15%;
+    }
+    .pattern-two {
+      bottom: 15%;
+      right: 15%;
+    }
+  }
+}

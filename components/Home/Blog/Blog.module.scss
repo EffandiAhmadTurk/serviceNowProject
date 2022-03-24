@@ -1,0 +1,55 @@
+@import 'styles/main.scss';
+
+.container {
+  @include container;
+  @include wrapper;
+  .categories-wrapper {
+    @include mb-m;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    @include tablet {
+      justify-content: flex-start;
+    }
+    div {
+      background-color: $blue-10;
+      @include p-s;
+      border-radius: 10px;
+      @include m-xs;
+      @include text-s;
+      color: $blue-100;
+      transition: 0.2s;
+      &:hover {
+        transition: 0.2s;
+        background-color: $blue-20;
+      }
+      @include tablet {
+        @include m-xxs;
+      }
+    }
+  }
+
+  .post-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: $space-m;
+    @include mb-l;
+    @include tablet {
+      @include mb-m;
+      grid-template-columns: 1fr;
+      grid-gap: $space-s;
+    }
+  }
+
+  .actions {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    @include mobile {
+      width: 100%;
+      @include pl-xl;
+      @include pr-xl;
+    }
+  }
+}

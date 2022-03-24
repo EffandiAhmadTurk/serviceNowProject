@@ -1,0 +1,135 @@
+@import 'styles/main.scss';
+
+.related-container {
+  h3 {
+    @include heading-l;
+    @include mb-s;
+  }
+  @include tablet {
+    display: none;
+  }
+}
+
+.container {
+  @include pt-m;
+  @include pb-m;
+  @include pl-m;
+  @include pr-m;
+  @include shadow;
+  border: 1px solid $blue_40;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  background-color: white;
+  position: relative;
+  transition: 0.3s;
+
+  @include tablet {
+    height: 156px;
+    box-sizing: border-box;
+    border-radius: 10px 10px 0px 0px;
+    @include pt-s;
+    @include pb-xs;
+  }
+
+  @include mobile {
+    @include pl-l;
+    @include pr-l;
+  }
+
+  &.is-hidden {
+    bottom: -156px;
+    svg {
+      transform: rotate(180deg);
+      transition: 0.3s;
+    }
+  }
+
+  @include mobile {
+    transition: 0.3s;
+    height: 150px;
+
+    &.is-hidden {
+      bottom: -150px;
+    }
+  }
+
+  svg {
+    transition: 0.3s;
+    color: $blue-100;
+    @include mb-xs;
+    @include tablet {
+      width: 34px;
+      height: 34px;
+      margin-bottom: 0px;
+    }
+  }
+
+  .icon-wrapper {
+    position: relative;
+    @include tablet {
+      position: absolute;
+      right: $space-s;
+      background-color: white;
+      height: 50px;
+      width: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px 5px 0px 0px;
+      top: calc(-1 * #{$space-m} - 30px);
+      right: $space-m;
+      border-top: 1px solid $blue_40;
+      border-left: 1px solid $blue_40;
+      border-right: 1px solid $blue_40;
+    }
+  }
+  .form {
+    @include tablet {
+      width: 60%;
+    }
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  h3 {
+    @include mb-xs;
+    @include heading-l;
+    overflow: hidden;
+    text-align: center;
+    @include mobile {
+      @include text-s;
+      font-weight: 200;
+    }
+  }
+
+  .loading-wrapper {
+    position: relative;
+    min-height: 100px;
+  }
+
+  input {
+    @include text-m;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid $black-20;
+    box-sizing: border-box;
+    @include pl-xs;
+    @include pr-xs;
+    @include pt-s;
+    @include pb-s;
+    @include mb-s;
+    &::placeholder {
+      @include text-m;
+      color: $black-40;
+    }
+    @include tablet {
+      border-radius: 5px;
+      @include mb-xs;
+      @include pt-xs;
+      @include pb-xs;
+    }
+  }
+}

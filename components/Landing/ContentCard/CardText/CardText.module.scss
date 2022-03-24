@@ -1,0 +1,9 @@
+@import 'styles/main.scss';
+
+.text {
+  max-width: 500px;
+
+  @include tablet {
+    max-width: 100%;
+  }
+}

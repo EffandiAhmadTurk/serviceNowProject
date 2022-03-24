@@ -1,0 +1,26 @@
+@import 'styles/main.scss';
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: $space-m;
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+
+  .list {
+    list-style: inside;
+    li {
+      padding-left: 23px;
+      text-indent: -23px;
+    }
+  }
+
+  .list,
+  .text {
+    @include paragraph;
+    strong {
+      font-weight: 200;
+    }
+  }
+}

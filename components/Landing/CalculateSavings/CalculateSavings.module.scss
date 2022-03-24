@@ -1,0 +1,172 @@
+@import 'styles/main.scss';
+
+.container {
+  @include container;
+  & .wrapper {
+    position: relative;
+    @include pt-l;
+    @include pb-xl;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include wrapper;
+
+    h2 {
+      @include mobile {
+        margin-right: 0px;
+        margin-left: 0px;
+        font-size: 20px;
+        line-height: 125%;
+      }
+    }
+
+    & .amount {
+      color: $blue-100;
+      max-width: 140px;
+      width: 100%;
+      display: inline-block;
+      text-align: left;
+      @include tablet {
+        max-width: 100px;
+        text-align: center;
+        display: inline;
+      }
+    }
+    & .alt-savings {
+      @include text-xl;
+      display: block;
+      text-align: center;
+      width: 100%;
+      display: inline-block;
+      span {
+        color: $blue-100;
+      }
+      @include mobile {
+        font-size: 18px;
+      }
+    }
+
+    & .input-range-wrapper {
+      box-sizing: border-box;
+      @include pt-l;
+
+      @include desktop {
+        @include pr-xl;
+        @include pl-xl;
+      }
+      @include tablet {
+        @include pr-s;
+        @include pl-s;
+      }
+      max-width: 830px;
+      margin: auto;
+      width: 100%;
+      position: relative;
+      z-index: 2;
+
+      & div {
+        &:global(.rc-slider-handle) {
+          background-color: $sienna-100;
+          width: 40px;
+          height: 40px;
+          margin-top: -16px;
+          border: 4px solid #ffffff;
+          box-sizing: border-box;
+          box-shadow: 0px 4px 44px rgba(0, 0, 0, 0.25);
+          @include mobile {
+            width: 30px;
+            height: 30px;
+            margin-top: -12px;
+          }
+        }
+      }
+    }
+    & .commissions-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+
+      & .commission {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        @include mb-m;
+        & > div {
+          @include mb-s;
+          @include heading-xxxl;
+          @include mobile {
+            @include mb-xs;
+          }
+        }
+
+        & span {
+          @include text-m;
+          @include mobile {
+            @include text-xs;
+          }
+        }
+      }
+    }
+    & .action {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+
+      @include tablet {
+        width: 60%;
+        margin: auto;
+      }
+
+      @include mobile {
+        width: 100%;
+        @include pl-xl;
+        @include pr-xl;
+      }
+
+      & > button {
+        width: 200px;
+        margin: auto;
+        @include mb-xs;
+        @include tablet {
+          width: 100%;
+        }
+      }
+      & > p {
+        @include text-m;
+        font-weight: 200;
+        @include mobile {
+          @include text-xs;
+          color: $black-40;
+        }
+      }
+    }
+    & .pattern {
+      position: absolute;
+      bottom: $space-l;
+      right: $space-l;
+      max-height: 100px;
+      z-index: -1;
+      @include tablet {
+        max-height: 40px;
+        bottom: $space-s;
+        right: $space-m;
+      }
+    }
+  }
+  & .mobile-note {
+    display: none;
+    @include mobile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: $blue-10;
+      height: 40px;
+      @include text-m;
+      font-weight: 300;
+    }
+  }
+}

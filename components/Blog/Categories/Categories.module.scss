@@ -1,0 +1,78 @@
+@import 'styles/main.scss';
+
+.container {
+  @include wrapper;
+  @include mb-m;
+  @include tablet {
+    @include mb-s;
+  }
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    // Fix orphaned item on these screen sizes
+    @media (min-width: 1200px) and (max-width: 1494px) {
+      max-width: 70%;
+      margin: auto;
+    }
+
+    @include mobile {
+      justify-content: flex-start;
+    }
+
+    .card {
+      display: flex;
+      background-color: $blue-10;
+      align-items: center;
+      @include pt-s;
+      @include pb-s;
+      @include pl-s;
+      @include pr-s;
+
+      border-radius: 10px;
+      @include mr-s;
+      @include mb-s;
+      transition: 0.2s;
+
+      @include mobile {
+        @include mr-xs;
+        @include mb-xs;
+      }
+
+      .card-title {
+        @include heading-s;
+
+        @include mobile {
+          @include text-xs;
+          @include mr-xs;
+          font-weight: 200;
+        }
+      }
+      svg {
+        @include mr-xs;
+        width: 20px;
+        color: $blue-100;
+        @include mobile {
+          @include mr-xxs;
+          width: 16px;
+          color: $blue-100;
+        }
+      }
+
+      &:hover {
+        transition: 0.2s;
+        background-color: $blue-20;
+      }
+
+      @include mobile {
+        border-radius: 5px;
+        @include pt-xs;
+        @include pb-xs;
+        @include pl-xs;
+        @include pr-xs;
+        @include mb-xs;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import 'styles/main.scss';
+
+.container {
+  .text {
+    @include mb-s;
+    a {
+      color: $blue-100;
+      :hover {
+        color: $blue-80;
+      }
+    }
+    h3 {
+      @include heading-l;
+    }
+    p {
+      @include paragraph;
+    }
+  }
+  .parks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+}

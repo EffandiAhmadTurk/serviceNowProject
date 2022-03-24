@@ -1,0 +1,24 @@
+@import 'styles/main.scss';
+
+.container {
+  .chips-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    .chip {
+      @include pt-s;
+      @include pb-s;
+      @include pl-s;
+      @include pr-s;
+      @include mr-xs;
+      @include mb-xs;
+      @include text-s;
+      border-radius: 10px;
+      background-color: $blue-10;
+      transition: 0.2s;
+      &:hover {
+        background-color: $blue-20;
+        transition: 0.2s;
+      }
+    }
+  }
+}

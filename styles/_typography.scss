@@ -1,0 +1,68 @@
+/* Fonts */
+@font-face {
+  font-family: 'CircularStd';
+  font-weight: 100;
+  src: url('/fonts/CircularStd-Light.otf') format('opentype');
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CircularStd';
+  font-weight: 200;
+  src: url('/fonts/CircularStd-Book.otf') format('opentype');
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CircularStd';
+  font-weight: 300;
+  src: url('/fonts/CircularStd-Medium.otf') format('opentype');
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CircularStd';
+  font-weight: 400;
+  src: url('/fonts/CircularStd-Bold.otf') format('opentype');
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CircularStd';
+  font-weight: 500;
+  src: url('/fonts/CircularStd-Black.otf') format('opentype');
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url('/fonts/icon-fonts/icomoon.eot');
+  src: url('/fonts/icon-fonts/icomoon.eot') format('embedded-opentype'),
+    url('/fonts/icon-fonts/icomoon.ttf') format('truetype'),
+    url('/fonts/icon-fonts/icomoon.woff') format('woff'),
+    url('/fonts/icon-fonts/icomoon.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+// Font Sizes
+// Set to 16px
+$font-base-size: 1rem;
+
+// Font Sizes
+// 3 x 16 = 48px
+$text-xxxxxl: calc(#{$font-base-size} * 3);
+$text-xxxxl: calc(#{$font-base-size} * 2.25);
+$text-xxxl: calc(#{$font-base-size} * 1.75);
+$text-xxl: calc(#{$font-base-size} * 1.5);
+$text-xl: calc(#{$font-base-size} * 1.25);
+$text-l: calc(#{$font-base-size} * 1.125);
+$text-m: calc(#{$font-base-size});
+$text-s: calc(#{$font-base-size} * 0.875);
+$text-xs: calc(#{$font-base-size} * 0.75);

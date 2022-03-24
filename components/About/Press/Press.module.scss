@@ -1,0 +1,73 @@
+@import 'styles/main.scss';
+
+.container {
+  @include container;
+  @include mt-l;
+  @include mb-xxl;
+  @include mobile {
+    @include mt-m;
+    @include mb-m;
+  }
+  & .wrapper {
+    @include wrapper;
+    @include pl-xxl;
+    @include pr-xxl;
+
+    & .press-block {
+      border: 1px solid $blue-40;
+      border-radius: 15px;
+      @include pt-l;
+      @include pb-l;
+      @include pl-l;
+      @include pr-l;
+      @include mobile {
+        @include pt-m;
+        @include pb-m;
+      }
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      transition: 0.2s;
+      &:hover {
+        & > h2 {
+          color: $blue-80;
+          transition: 0.2s;
+        }
+      }
+      &:not(:last-child) {
+        @include mb-m;
+        @include mobile {
+          @include mb-s;
+        }
+      }
+      & > h3 {
+        @include mb-xs;
+        @include text-s;
+        color: $blue-100;
+        font-weight: 200;
+      }
+
+      & > h2 {
+        @include mb-m;
+        @include mobile {
+          @include mb-xs;
+        }
+        @include heading-xxxl;
+        text-decoration: underline;
+      }
+
+      & > p {
+        @include text-s;
+        @include mobile {
+          @include text-m;
+          color: $black-60;
+          font-weight: 200;
+        }
+        color: $black-60;
+        font-weight: 300;
+      }
+    }
+  }
+}

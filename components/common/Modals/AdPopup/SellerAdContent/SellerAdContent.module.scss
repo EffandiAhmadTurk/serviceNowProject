@@ -1,0 +1,21 @@
+@import 'styles/main.scss';
+
+.container {
+  box-sizing: border-box;
+  background-color: $blue_100;
+  text-align: center;
+  @include p-xl;
+  border-radius: 20px;
+
+  h3 {
+    @include heading-xxxl;
+    color: white;
+    @include mb-m;
+  }
+
+  h4 {
+    @include heading-l;
+    color: white;
+    @include mb-xs;
+  }
+}

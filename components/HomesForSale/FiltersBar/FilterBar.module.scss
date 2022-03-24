@@ -1,0 +1,80 @@
+@import 'styles/main.scss';
+
+.sticky-box {
+  top: $desktop-nav-height;
+  position: sticky;
+  @include tablet {
+    top: $mobile-nav-height;
+  }
+  z-index: 3;
+  .container {
+    @include pr-m;
+    @include pl-m;
+    @include pt-s;
+    @include pb-s;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-bottom: 1px solid $blue-20;
+
+    @include tablet {
+      @include pr-s;
+      @include pl-s;
+      @include pt-xs;
+      @include pb-xs;
+    }
+
+    .wrapper {
+      width: 90%;
+      display: flex;
+      position: relative;
+      align-content: center;
+      @include tablet {
+        display: flex;
+        justify-self: end;
+        width: 100%;
+      }
+
+      .filters {
+        @include mr-xs;
+        max-width: 80%;
+        display: flex;
+        position: relative;
+        z-index: 99;
+        flex-wrap: wrap;
+        align-items: center;
+
+        @include tablet {
+          display: none;
+        }
+
+        .chip {
+          @include text-s;
+          @include pt-xs;
+          @include pb-xs;
+          @include pr-m;
+          @include pl-m;
+          @include m-xxs;
+          border-radius: 5px;
+          background-color: $blue-10;
+          color: $blue-100;
+          white-space: nowrap;
+          font-weight: 200;
+        }
+      }
+    }
+
+    .show-map-toggle {
+      display: flex;
+      align-items: center;
+
+      @include tablet {
+        display: none;
+      }
+      .text {
+        @include mr-m;
+        @include text-s;
+      }
+    }
+  }
+}

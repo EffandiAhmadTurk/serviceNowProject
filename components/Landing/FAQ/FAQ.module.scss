@@ -1,0 +1,49 @@
+@import "styles/main.scss";
+
+.container {
+  @include container;
+  @include mt-l;
+  @include mb-l;
+  @include mobile {
+    @include mt-m;
+    @include mb-m;
+  }
+  & .wrapper {
+    @include wrapper;
+    & > h2 {
+      @include heading-xxxxl;
+      text-align: center;
+      white-space: pre-line;
+      @include mb-s;
+    }
+    & .contact {
+      max-width: 70%;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      white-space: nowrap;
+      @include tablet {
+        flex-direction: column;
+      }
+      & > div {
+        flex: 1;
+        text-align: center;
+        @include mb-xs;
+      }
+      @include text-m;
+      & a {
+        color: $blue-100;
+      }
+    }
+
+    & .faqs-wrapper {
+      max-width: 80%;
+      margin: auto;
+      @include mt-m;
+      @include tablet {
+        @include mt-s;
+        max-width: none;
+      }
+    }
+  }
+}

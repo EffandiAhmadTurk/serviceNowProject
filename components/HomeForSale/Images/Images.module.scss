@@ -1,0 +1,102 @@
+@import 'styles/main.scss';
+
+.desktop-container {
+  @include mt-m;
+  height: 50vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: $space-s;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  img {
+    object-fit: cover;
+    cursor: pointer;
+  }
+  .child-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: $space-s;
+  }
+  .home-icon {
+    color: $blue-100;
+  }
+
+  &.map-view {
+    display: block;
+  }
+
+  .actions {
+    position: absolute;
+    bottom: $space-m;
+    right: $space-m;
+    display: flex;
+    .show-all-button {
+      display: flex;
+      align-items: center;
+      @include pt-xs;
+      @include pb-xs;
+      @include pl-s;
+      @include pr-s;
+      @include mr-xs;
+      font-size: $text-s;
+      font-weight: 200;
+      white-space: nowrap;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 8px;
+      svg {
+        @include mr-xxs;
+      }
+    }
+  }
+}
+.desktop-container.one-image {
+  grid-template-columns: 1fr;
+  .child-grid {
+    display: none;
+  }
+}
+
+.modal-container {
+  img {
+    display: block;
+    object-fit: cover;
+    @include mb-xs;
+  }
+
+  .close-icon {
+    position: fixed;
+    right: 50px;
+    top: 24px;
+    z-index: 1000;
+    color: $black-100;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .sticky-box {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.backdrop {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.mobile-container {
+  .home-icon {
+    color: $blue-100;
+  }
+  img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    @include tablet {
+      height: 550px;
+    }
+    @include mobile {
+      height: 275px;
+    }
+  }
+}

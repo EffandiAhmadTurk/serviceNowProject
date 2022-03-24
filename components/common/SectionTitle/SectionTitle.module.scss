@@ -1,0 +1,26 @@
+@import 'styles/main.scss';
+
+.container {
+  .title {
+    @include heading-xxxxl;
+    @include mb-m;
+    white-space: pre-line;
+    &.white {
+      color: white;
+    }
+    @include tablet {
+      @include ml-s;
+      @include mr-s;
+    }
+  }
+  .eyebrow {
+    @include overline;
+    color: $sienna-100;
+    @include mobile {
+      font-size: 11px;
+    }
+  }
+  .center {
+    text-align: center;
+  }
+}

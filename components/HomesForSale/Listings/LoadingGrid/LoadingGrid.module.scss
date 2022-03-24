@@ -1,0 +1,22 @@
+@import 'styles/main.scss';
+
+.container {
+  @include mb-m;
+  display: grid;
+  grid-template-columns: repeat(4, calc(25% - 15px));
+  grid-auto-rows: 300px;
+  grid-gap: $space-m;
+  justify-content: center;
+
+  @include tablet {
+    grid-template-columns: repeat(2, 33.333%);
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.container.map-grid {
+  grid-template-columns: repeat(2, calc(50% - #{$space-s}));
+}

@@ -1,0 +1,87 @@
+@import "styles/library.scss";
+@import "styles/main.scss";
+
+.main-link {
+  @include text-m;
+  @include pl-l;
+  @include pr-l;
+  height: 50px;
+  background-color: $blue-100;
+  font-weight: 200;
+  border-radius: 10px;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  white-space: nowrap;
+  @include mobile {
+    width: 100%;
+  }
+  &.main-black {
+    background-color: $black-100;
+  }
+}
+
+.SecondaryLink {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  text-align: center;
+  font-feature-settings: "liga" off;
+  cursor: pointer;
+  display: flex;
+  width: fit-content;
+  color: $royal-blue;
+  text-decoration: none;
+  &:hover {
+    color: $royal-blue-hover;
+  }
+
+  @media (max-width: 1050px) {
+    font-size: 14px;
+  }
+}
+
+.outline-button-link {
+  width: 100%;
+  display: inline-block;
+}
+
+.outline-button {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  text-align: center;
+  font-feature-settings: "liga" off;
+  color: $royal-blue;
+  padding: 12px 20px 12px 20px;
+  border: 2px solid $royal-blue;
+  background-color: #fff;
+  cursor: pointer;
+  width: 100%;
+  font-family: "CircularStd", sans-serif;
+
+  &:hover {
+    background-color: $royal-blue-hover;
+    color: #fff;
+  }
+
+  @media (max-width: 1050px) {
+    font-size: 15px;
+  }
+}
+
+.outline-secondary-button {
+  height: 50px;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 14px;
+  width: auto;
+  background: transparent;
+}

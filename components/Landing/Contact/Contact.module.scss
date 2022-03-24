@@ -1,0 +1,82 @@
+@import 'styles/main.scss';
+
+.contact {
+  @include container;
+  @include wrapper;
+  @include pt-l;
+  @include pb-xl;
+
+  position: relative;
+  & .wrapper {
+    background-color: $blue-10;
+    max-width: 840px;
+    margin: auto;
+    border-radius: 10px;
+    @include pt-l;
+    @include pb-l;
+    @include wrapper;
+    @include mobile {
+      @include pl-m;
+      @include pr-m;
+    }
+    & .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      @include desktop {
+        @include ml-xxl;
+        @include mr-xl;
+      }
+      & > h3 {
+        @include heading-xxxxl;
+        @include mb-s;
+      }
+      & > p {
+        @include text-l;
+        @include mb-m;
+        @include mobile {
+          @include text-s;
+        }
+      }
+      .actions {
+        width: 200px;
+        @include mobile {
+          width: 100%;
+          @include pl-l;
+          @include pr-l;
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
+  & .pattern-one {
+    position: absolute;
+    top: -24px;
+    left: $space-xxl;
+    max-height: 130px;
+    z-index: -1;
+
+    @include tablet {
+      top: -50px;
+      left: $space-s;
+    }
+    @include mobile {
+      top: -25px;
+    }
+  }
+  & .pattern-two {
+    position: absolute;
+    bottom: $space-m;
+    right: $space-m;
+    max-height: 130px;
+    z-index: -1;
+    @include tablet {
+      right: $space-s;
+      bottom: -30px;
+    }
+    @include mobile {
+      bottom: -10px;
+    }
+  }
+}

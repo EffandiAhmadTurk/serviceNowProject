@@ -1,0 +1,31 @@
+@import 'styles/main.scss';
+
+.container {
+  @include pt-l;
+  @include pb-l;
+  @include mb-l;
+  background-color: $grey-100;
+  @include container;
+
+  .loading-container {
+    display: flex;
+    min-height: 300px;
+    justify-content: center;
+    align-items: center;
+  }
+  h2 {
+    @include heading-xxxxl;
+    @include mb-l;
+    @include pl-s;
+    @include pr-s;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .slide {
+    @include ml-s;
+    @include mr-s;
+  }
+}

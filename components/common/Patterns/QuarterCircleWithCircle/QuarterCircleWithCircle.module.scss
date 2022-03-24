@@ -1,0 +1,62 @@
+@import '/styles/main.scss';
+
+.red {
+  background-color: $sienna-100;
+}
+.blue {
+  background-color: $blue-100;
+}
+.yellow {
+  background-color: $yellow-100;
+}
+.grey {
+  background-color: $black-40;
+}
+.light-grey {
+  background-color: $black-20;
+}
+
+.quarter-circle {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border-radius: 50%;
+  top: 18px;
+  left: 18px;
+
+  @include tablet {
+    width: 130px;
+    height: 130px;
+    top: 10px;
+    left: 10px;
+  }
+
+  @include mobile {
+    width: 100px;
+    height: 100px;
+    top: 5px;
+    left: 5px;
+  }
+}
+.circle {
+  width: 46px;
+  height: 46px;
+  position: absolute;
+  border-radius: 50%;
+  top: 1px;
+  left: 1px;
+
+  @include tablet {
+    width: 32px;
+    height: 32px;
+    top: 1px;
+    left: 1px;
+  }
+
+  @include mobile {
+    width: 22px;
+    height: 22px;
+    top: 1px;
+    left: 1px;
+  }
+}

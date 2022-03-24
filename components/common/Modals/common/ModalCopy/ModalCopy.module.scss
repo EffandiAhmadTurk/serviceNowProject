@@ -1,0 +1,9 @@
+@import 'styles/main.scss';
+
+.copy {
+  @include text-m;
+  @include mobile {
+    @include text-s;
+    line-height: 1.5;
+  }
+}

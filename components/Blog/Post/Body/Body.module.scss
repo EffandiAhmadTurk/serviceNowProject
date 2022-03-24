@@ -1,0 +1,43 @@
+@import 'styles/main.scss';
+
+.container {
+  @include wrapper;
+  .infogram-embed {
+    @include my-m;
+  }
+  h2 {
+    @include heading-xxxl;
+    @include mb-xs;
+  }
+  h3 {
+    @include heading-xxl;
+    @include mb-xs;
+  }
+  h4 {
+    @include heading-xl;
+    @include mb-xxs;
+  }
+  p {
+    @include paragraph;
+    @include mb-m;
+  }
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  ul {
+    margin: 0px;
+    list-style-position: outside;
+    list-style-type: disc;
+  }
+
+  li {
+    @include paragraph;
+    margin-left: 1em;
+  }
+
+  a {
+    color: $blue-100;
+  }
+}

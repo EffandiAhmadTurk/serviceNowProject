@@ -1,0 +1,29 @@
+@import 'styles/main.scss';
+
+.container {
+  height: 0px;
+  @include wrapper;
+  .breadcrumbs {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    @include tablet {
+      flex-wrap: wrap;
+    }
+    li,
+    a {
+      @include text-s;
+    }
+    a {
+      cursor: pointer;
+      color: $blue-100;
+    }
+    li {
+      color: $black-100;
+    }
+    svg {
+      margin: 2px 2.5px 0px;
+      color: $black-40;
+    }
+  }
+}

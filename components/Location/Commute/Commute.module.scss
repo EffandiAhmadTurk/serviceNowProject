@@ -1,0 +1,91 @@
+@import 'styles/main.scss';
+
+.container {
+  .text {
+    p {
+      @include paragraph;
+    }
+    a {
+      color: $blue-100;
+      :hover {
+        color: $blue-80;
+      }
+    }
+    h3 {
+      @include heading-xl;
+    }
+  }
+  .score-container {
+    @include mt-s;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: $space-m;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    min-height: 120px;
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+
+    .score-wrapper {
+      @include p-m;
+      border-radius: 20px;
+      &.green {
+        background-color: $green-10;
+        color: $green-100;
+      }
+      &.yellow {
+        background-color: $yellow-10;
+        color: $yellow-100;
+      }
+      &.coral {
+        background-color: $sienna-10;
+        color: $sienna-100;
+      }
+      &.grey {
+        background-color: $grey-10;
+        color: $grey-100;
+      }
+      h3 {
+        @include heading-l;
+        text-align: center;
+      }
+
+      .rating-block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .rating {
+          @include heading-xxxxl;
+          color: inherit;
+          @include ml-xxs;
+          @include mr-xxs;
+        }
+
+        .score {
+          @include text-s;
+
+          margin-top: 15px;
+        }
+      }
+      .description {
+        @include text-s;
+        text-align: center;
+      }
+    }
+
+    .error {
+      min-height: 120px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      h4 {
+        @include heading-m;
+      }
+    }
+  }
+}

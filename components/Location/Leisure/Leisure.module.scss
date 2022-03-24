@@ -1,0 +1,56 @@
+@import 'styles/main.scss';
+
+.container {
+  @include tablet {
+  }
+  .text {
+    @include mb-s;
+    a {
+      color: $blue_100;
+      :hover {
+        color: $blue_80;
+      }
+    }
+    h3 {
+      @include heading-xl;
+    }
+    p {
+      @include paragraph;
+    }
+  }
+}
+.favorites-wrapper {
+  .title {
+    @include heading-xl;
+    @include mb-s;
+  }
+  .tabs {
+    background-color: $grey_100;
+    @include mb-s;
+
+    span {
+      background: $blue_100;
+      height: 3px;
+    }
+
+    button > span {
+      @include text-m;
+      font-weight: 200;
+      background-color: $grey_100;
+      text-transform: none;
+      letter-spacing: 0px;
+    }
+  }
+
+  .tab-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: $space-s;
+    @include tablet {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+@import 'styles/main.scss';
+
+.container {
+  @include wrapper;
+  @include mb-l;
+
+  @include mobile {
+    @include mb-m;
+  }
+  .featured-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: $space-m;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+      grid-gap: $space-s;
+    }
+    .main-post-wrapper {
+      display: flex;
+      flex-direction: column;
+      border-radius: 20px;
+      overflow: hidden;
+      height: 100%;
+      img {
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+      }
+      .footer {
+        @include pt-m;
+        @include pb-l;
+        @include pl-m;
+        @include pr-l;
+        background-color: $grey-100;
+        position: relative;
+        h3 {
+          @include heading-xxxl;
+        }
+        .icon {
+          position: absolute;
+          width: 32px;
+          color: $blue-100;
+          right: $space-s;
+          bottom: $space-s;
+
+          @include mobile {
+            width: 25px;
+          }
+        }
+      }
+    }
+    .posts-wrapper {
+      min-height: calc((156px * 3) + (2 * #{$space-s}));
+      display: grid;
+      grid-template-columns: 1fr;
+      align-content: flex-start;
+      grid-gap: $space-s;
+      @include mobile {
+        min-height: inherit;
+      }
+    }
+  }
+}

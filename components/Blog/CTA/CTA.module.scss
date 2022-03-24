@@ -1,0 +1,61 @@
+@import 'styles/main.scss';
+
+.container {
+  background-color: $black-100;
+  @include pt-xl;
+  @include pb-xl;
+  border-radius: 20px;
+  @include mb-l;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  @include tablet {
+    width: 100%;
+    border-radius: 0px;
+  }
+
+  @include mobile {
+    @include mb-m;
+  }
+
+  .wrapper {
+    text-align: center;
+    margin: auto;
+    box-sizing: border-box;
+    @include container;
+    @include tablet {
+      @include pl-xl;
+      @include pr-xl;
+    }
+    @include mobile {
+      @include pl-s;
+      @include pr-s;
+    }
+    h3 {
+      @include heading-xxxl;
+      color: white;
+      @include mb-s;
+    }
+    p {
+      @include paragraph;
+      color: white;
+      @include mb-m;
+    }
+    .button-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: $space-m;
+      width: 75%;
+      margin: auto;
+      box-sizing: border-box;
+      @include mobile {
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-gap: $space-s;
+        @include pl-l;
+        @include pr-l;
+      }
+    }
+  }
+}

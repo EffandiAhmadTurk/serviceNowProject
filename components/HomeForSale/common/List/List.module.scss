@@ -1,0 +1,24 @@
+@import 'styles/main.scss';
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: $space-m;
+  position: relative;
+  @include mb-s;
+  .line-cover {
+    height: 1px;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    bottom: 0px;
+  }
+  @include tablet {
+    @include mb-xxs;
+    grid-template-columns: 1fr;
+  }
+}
+
+.list.full-width {
+  grid-template-columns: 1fr;
+}

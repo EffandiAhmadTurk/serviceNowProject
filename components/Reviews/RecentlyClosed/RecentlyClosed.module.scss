@@ -1,0 +1,64 @@
+@import 'styles/library.scss';
+
+.resently-closed {
+  padding-top: 80px;
+  margin: 0 100px 100px;
+  text-align: center;
+  @include tablet {
+    margin: 0 auto 50px;
+  }
+  .header-title {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: $navy;
+    margin: 0 0 11px;
+    @include tablet {
+      font-size: 32px;
+    }
+  }
+  .header-subtitle {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 130%;
+    text-align: center;
+    font-feature-settings: 'liga' off;
+    color: $navy;
+    margin: 0 30px 25px;
+    @include tablet {
+      font-size: 18px;
+    }
+  }
+  .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.reviews-card {
+  max-width: 275px;
+  margin: 15px;
+  text-align: center;
+  background: #ffffff;
+  box-shadow: 0px 1.07248px 6.43488px #dadada;
+  &-image {
+    width: 100%;
+    height: 154px;
+    object-fit: cover;
+  }
+  &-title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    color: $mint;
+    margin: 0 0 5px;
+  }
+  &-address {
+    font-size: 12px;
+    line-height: 15px;
+    color: $navy;
+    margin: 0 auto 10px;
+  }
+}

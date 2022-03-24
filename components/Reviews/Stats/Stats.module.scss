@@ -1,0 +1,53 @@
+@import 'styles/main.scss';
+
+.container {
+  @include mt-xl;
+  @include mb-xl;
+
+  @include mobile {
+    @include mt-m;
+    @include mb-m;
+  }
+  @include container;
+  & .wrapper {
+    max-width: 80%;
+    box-sizing: border-box;
+    margin: auto;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    & > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      text-align: center;
+      flex: 1;
+      height: 110px;
+
+      .stat-name {
+        color: $blue-100;
+      }
+
+      @include tablet {
+        height: 80px;
+        width: 50%;
+        flex: none;
+        @include mb-m;
+      }
+      & > h4 {
+        @include heading-xxxxxl;
+        @include tablet {
+          text-transform: lowercase;
+        }
+      }
+      & > span {
+        @include text-l;
+        @include tablet {
+          @include text-m;
+        }
+      }
+    }
+
+    display: flex;
+  }
+}

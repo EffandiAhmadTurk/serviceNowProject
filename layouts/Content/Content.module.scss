@@ -1,0 +1,41 @@
+@import 'styles/main.scss';
+
+.container {
+  @include mt-m;
+  @include mb-m;
+
+  &.with-container {
+    @include container;
+  }
+
+  &.with-dual-cta {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+
+  &.with-right-cta {
+    grid-template-columns: 2.25fr 1fr;
+  }
+
+  &.with-dual-cta,
+  &.with-right-cta {
+    display: grid;
+    grid-gap: $space-l;
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+    .cta-wrapper {
+      .cta {
+        position: sticky;
+        top: 20%;
+        z-index: 3;
+
+        @include tablet {
+          top: inherit;
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

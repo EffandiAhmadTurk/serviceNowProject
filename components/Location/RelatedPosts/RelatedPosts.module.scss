@@ -1,0 +1,30 @@
+@import 'styles/main.scss';
+
+.container {
+  @include mt-m;
+  @include mb-m;
+
+  h2 {
+    text-align: center;
+    @include heading-xxxxl;
+    @include mb-m;
+    text-align: center;
+  }
+  .loading-container {
+    position: relative;
+    min-height: 120px;
+    width: 100%;
+  }
+  .not-found {
+    text-align: center;
+    width: 100%;
+    @include text-m;
+  }
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@import 'styles/main.scss';
+
+.container {
+  .section {
+    &-title {
+      @include heading-l;
+      @include pl-m;
+      @include pt-xs;
+      @include pb-xs;
+      background: $blue_10;
+      @include wrapper;
+    }
+
+    &-content {
+      @include mt-xs;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      @include mobile {
+        flex-direction: column;
+      }
+
+      .column {
+        @include wrapper;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+      .information {
+        @include text-s;
+        width: 100%;
+        &-title {
+          @include text-m;
+          font-weight: 500;
+        }
+
+        &-list {
+          @include m-xs;
+          @include pl-xxs;
+          &-item {
+            @include mb-xs;
+            span {
+              font-weight: 200;
+            }
+          }
+        }
+      }
+    }
+  }
+}

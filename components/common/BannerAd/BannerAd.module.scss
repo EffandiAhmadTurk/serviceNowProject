@@ -1,0 +1,53 @@
+@import 'styles/main.scss';
+
+.container {
+  @include p-l;
+  background-color: $blue_100;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  align-items: center;
+  @include wrapper;
+
+  @include tablet {
+    @include pt-m;
+    @include pb-m;
+    flex-direction: column;
+    border-radius: 0px;
+  }
+
+  .copy {
+    flex: 3;
+    @include tablet {
+      text-align: center;
+      @include mb-s;
+    }
+    h3 {
+      @include heading-xxxxl;
+      @include mb-xxs;
+      color: white;
+      white-space: pre-line;
+    }
+    p {
+      @include text-l;
+      color: white;
+      @include tablet {
+        @include pl-l;
+        @include pr-l;
+        font-weight: 100;
+      }
+    }
+  }
+
+  .action-wrapper {
+    box-sizing: border-box;
+    @include tablet {
+      width: 60%;
+    }
+    @include mobile {
+      width: 100%;
+      @include pl-xl;
+      @include pr-xl;
+    }
+  }
+}

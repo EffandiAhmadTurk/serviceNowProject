@@ -1,0 +1,49 @@
+@import 'styles/main.scss';
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: $space-m;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+
+  .wrapper {
+    @include p-m;
+    border-radius: 20px;
+
+    &.pros {
+      background: $green-100;
+      ul {
+        list-style-image: url('/icons/check-white-round.svg');
+      }
+    }
+    &.cons {
+      background: $sienna-100;
+      ul {
+        list-style-image: url('/icons/uncheck-white-round.svg');
+      }
+    }
+
+    h3 {
+      @include heading-xxl;
+      @include mb-s;
+      color: white;
+      @include tablet {
+        font-size: 22px;
+      }
+    }
+
+    .content {
+      @include pl-m;
+      ul {
+        li {
+          @include text-m;
+          @include mb-s;
+          color: white;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+@import 'styles/main.scss';
+
+.container {
+  position: relative;
+  .rating-wrapper {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: -40px;
+    right: 0px;
+
+    @include mobile {
+      position: relative;
+      top: 0px;
+      @include mb-s;
+    }
+
+    .rating {
+      @include mr-xs;
+    }
+    .score {
+      @include heading-m;
+      @include mr-xs;
+    }
+    .text {
+      @include text-s;
+      color: $black-60;
+    }
+  }
+  .cta-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include mb-s;
+
+    @include mobile {
+      flex-direction: column;
+    }
+
+    .text {
+      @include text-m;
+
+      @include mobile {
+        text-align: center;
+        @include mb-s;
+      }
+    }
+  }
+
+  .review {
+    @include p-m;
+    @include mb-s;
+    background-color: $grey-80;
+    border-radius: 15px;
+    @include mobile {
+      padding: 25px 20px;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      @include mobile {
+        flex-direction: column-reverse;
+      }
+      .title {
+        @include heading-xl;
+        @include mb-xs;
+        color: $black-80;
+        font-style: italic;
+      }
+    }
+    .text {
+      @include paragraph;
+      @include mb-xs;
+    }
+
+    .name {
+      @include heading-m;
+    }
+  }
+}

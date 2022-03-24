@@ -1,0 +1,106 @@
+@import '/styles/main.scss';
+
+.red {
+  background-color: $sienna-100;
+}
+.blue {
+  background-color: $blue-100;
+}
+.yellow {
+  background-color: $yellow-100;
+}
+.grey {
+  background-color: $black-40;
+}
+
+.triangle {
+  border-left: 45px solid transparent;
+  border-right: 45px solid transparent;
+  transform: rotateZ(-40deg);
+  position: absolute;
+  top: -8px;
+  left: -14px;
+  background-color: transparent;
+  &.red {
+    border-bottom: 80px solid $sienna-100;
+  }
+  &.blue {
+    border-bottom: 80px solid $blue-100;
+  }
+  &.yellow {
+    border-bottom: 80px solid $yellow-100;
+  }
+  &.grey {
+    border-bottom: 80px solid $black-40;
+  }
+  &.light-grey {
+    border-bottom: 80px solid $black-20;
+  }
+
+  @include tablet {
+    border-left: 33px solid transparent;
+    border-right: 33px solid transparent;
+    top: -8px;
+    left: -10px;
+    &.red {
+      border-bottom: 63px solid $sienna-100;
+    }
+    &.blue {
+      border-bottom: 63px solid $blue-100;
+    }
+    &.yellow {
+      border-bottom: 63px solid $yellow-100;
+    }
+    &.grey {
+      border-bottom: 63px solid $black-40;
+    }
+    &.light-grey {
+      border-bottom: 63px solid $black-20;
+    }
+  }
+
+  @include mobile {
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    top: -4px;
+    left: -4px;
+    &.red {
+      border-bottom: 40px solid $sienna-100;
+    }
+    &.blue {
+      border-bottom: 40px solid $blue-100;
+    }
+    &.yellow {
+      border-bottom: 40px solid $yellow-100;
+    }
+    &.grey {
+      border-bottom: 40px solid $black-40;
+    }
+    &.light-grey {
+      border-bottom: 40px solid $black-20;
+    }
+  }
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  bottom: 3px;
+  right: 10px;
+
+  @include tablet {
+    width: 30px;
+    height: 30px;
+    bottom: 2px;
+    right: 7px;
+  }
+
+  @include mobile {
+    width: 20px;
+    height: 20px;
+    bottom: 1px;
+    right: 5px;
+  }
+}

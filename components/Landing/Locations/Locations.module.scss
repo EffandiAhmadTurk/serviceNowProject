@@ -1,0 +1,65 @@
+@import 'styles/main.scss';
+
+.container {
+  text-align: center;
+  @include pt-l;
+  @include mb-l;
+  position: relative;
+
+  @include mobile {
+    @include pt-xl;
+    @include mb-l;
+  }
+
+  & .cards-wrapper {
+    @include ml-xxl;
+    @include mr-xxl;
+    @include pl-xl;
+    @include pr-xl;
+    @include tablet {
+      margin: 0;
+      @include pl-s;
+      @include pr-s;
+    }
+    & .cards-container {
+      @include mb-l;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: $space-m;
+      @include tablet {
+        @include mb-m;
+        grid-gap: $space-s;
+        grid-template-columns: 1fr 1fr;
+      }
+      @include mobile {
+        grid-gap: $space-xxs;
+      }
+      a {
+        text-decoration: none;
+      }
+    }
+    & .action {
+      display: inline-block;
+      @include mobile {
+        width: 100%;
+        box-sizing: border-box;
+        @include pl-xl;
+        @include pr-xl;
+      }
+    }
+  }
+
+  & .pattern {
+    position: absolute;
+    top: 0;
+    right: $space-xl;
+    max-height: 100px;
+    z-index: -1;
+    transform: translate(-50%, 10%);
+    @include tablet {
+      max-height: 50px;
+      transform: none;
+      left: $space-s;
+    }
+  }
+}

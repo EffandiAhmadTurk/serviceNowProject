@@ -1,0 +1,15 @@
+@import 'styles/main.scss';
+
+.container {
+  @include container;
+  @include wrapper;
+  @include mb-l;
+  img {
+    width: 150px;
+    object-fit: contain;
+  }
+  p {
+    @include text-m;
+    color: $black_80;
+  }
+}

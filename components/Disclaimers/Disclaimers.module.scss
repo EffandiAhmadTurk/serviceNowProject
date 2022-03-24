@@ -1,0 +1,30 @@
+@import 'styles/main.scss';
+
+.container {
+  .title {
+    h1 {
+      @include heading-xxxxl;
+      text-align: center;
+      @include mb-xl;
+      @include mt-xl;
+    }
+    h2 {
+      @include heading-xxl;
+      @include mt-l;
+      @include mb-xs;
+    }
+  }
+
+  .wrapper {
+    @include mb-xxl;
+    h2 {
+      @include heading-xxl;
+      @include mt-l;
+      @include mb-xs;
+    }
+    p {
+      @include paragraph;
+      @include mb-m;
+    }
+  }
+}

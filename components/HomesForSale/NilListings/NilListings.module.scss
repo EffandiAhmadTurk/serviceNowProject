@@ -1,0 +1,17 @@
+@import 'styles/main.scss';
+
+.container {
+  text-align: center;
+  width: 100%;
+
+  .text {
+    @include mt-l;
+    @include p-m;
+    @include text-m;
+    display: inline-block;
+    background-color: $grey-100;
+    text-align: center;
+    color: $black-80;
+    border-radius: 10px;
+  }
+}

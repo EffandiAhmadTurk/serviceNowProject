@@ -1,0 +1,8 @@
+@import 'styles/main.scss';
+
+.text {
+  @include text-m;
+  color: $black_80;
+  line-height: 1.5;
+  @include wrapper;
+}
